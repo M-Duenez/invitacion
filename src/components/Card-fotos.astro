@@ -1,0 +1,102 @@
+---
+// src/components/CardFotos.astro
+
+interface ImageProps {
+  url: string;
+  alt?: string;
+  angle?: number;
+  position?: number;
+  verticalOffset?: number;
+  border?: string;
+  hoverScale?: number;
+  hoverElevation?: number;
+  rotationOrigin?: string;
+  zIndex?: number;
+  customClass?: string;
+  width?: string;
+  height?: string;
+  initialZIndex?: number;
+}
+
+interface Props {
+  images: ImageProps[];
+  containerHeight?: number | string;
+  containerWidth?: number | string;
+  containerClass?: string;
+  baseZIndex?: number;
+  centerImageBoost?: number;
+}
+
+const { 
+  images = [],
+  containerHeight = '400px',
+  containerWidth = '100%',
+  containerClass = '',
+  baseZIndex = 10,
+  centerImageBoost = 20
+} = Astro.props;
+
+// Valores por defecto para cada imagen
+const defaultImageProps: Partial<ImageProps> = {
+  alt: 'Foto',
+  angle: 0,
+  position: 50,
+  verticalOffset: 0,
+  border: 'border-4 border-white/80',
+  hoverScale: 1.15,
+  hoverElevation: 50,
+  rotationOrigin: 'bottom',
+  customClass: '',
+  width: 'w-40 md:w-63 lg:w-100',
+  height: 'h-50 md:h-85 lg:h-125'
+};
+---
+
+<!-- Contenedor principal -->
+<div class={`relative w-full flex justify-center ${containerClass}`}>
+  <div 
+    class="relative flex items-center mx-auto" 
+    style={`
+      height: ${typeof containerHeight === 'number' ? `${containerHeight}px` : containerHeight};
+      width: ${typeof containerWidth === 'number' ? `${containerWidth}px` : containerWidth};
+    `}
+  >
+    {images.map((image, index) => {
+      const imgProps = { ...defaultImageProps, ...image };
+      
+      // Calcular si es la imagen central
+      const isCenterImage = index === Math.floor(images.length / 2);
+      
+      // Asignar z-index más alto a la imagen central inicialmente
+      const initialZIndex = imgProps.initialZIndex ?? 
+                         (isCenterImage ? baseZIndex + centerImageBoost : baseZIndex + index);
+      
+      return (
+        <div
+          class={`absolute transition-all duration-900 ease-in-out card-fotos-image hover:scale-115 hover:z-50 `}
+          style={`
+            transform: rotate(${imgProps.angle}deg) translateY(${imgProps.verticalOffset}px);
+            left: ${imgProps.position}%;
+            transform-origin: ${imgProps.rotationOrigin};
+            z-index: ${initialZIndex};
+          `}
+        >
+          <img
+            src={imgProps.url}
+            alt={`${imgProps.alt} ${index + 1}`}
+            loading="lazy"
+            class={`
+              ${imgProps.width}
+              ${imgProps.height}
+              object-cover 
+              rounded-xl
+              transition-all
+              border-5 border-[var(--color-secondary)] 
+            `}
+          />
+        </div>
+      );
+    })}
+  </div>
+</div>
+

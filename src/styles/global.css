@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffe3e7; /* light-bg */
+  --color-text: #333333; /* light-text */
+  --color-primary: #f8bbd0; /* light-primary */
+  --color-secondary: #f48fb1; /* light-secondary */
+  --color-accent: #f06292; /* light-accent */
+  --color-btntema: #ffc0cb;
+  --color-start: #f06292;
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary), #ffc0cb);
+  --gradient-footer: linear-gradient(135deg, #ffc0cb, var(--color-secondary));
+  --gradient-datetimer: liner-gradient(
+    135deg,
+    var(--color-primary),
+    #f8bbd0,
+    var(--color-primary)
+  );
+}
+
+.dark {
+  --color-bg: #1a0333; /* dark-bg */
+  --color-text: #ffffff; /* dark-text */
+  --color-primary: #7b1fa2; /* dark-primary */
+  --color-secondary: #9c27b0; /* dark-secondary */
+  --color-accent: #ba68c8; /* dark-accent */
+  --color-btntema: #9c27b0;
+  --color-start: #ffd700;
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #4a148c,
+    #6d2599,
+    var(--color-secondary)
+  );
+  --gradient-footer: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    #6d2599,
+    #4a148c
+  );
+  --gradient-datetimer: linear-gradient(
+    45deg,
+    var(--color-primary),
+    #9476bb
+  );
+}
+
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300; 
+}
+
+/* Ejemplo de uso en un elemento (botón/card) */
+.gradient-element {
+  background: var(--gradient-secondary);
+  @apply transition-all duration-500;
+}
+
+.gradient-footer {
+  background: var(--gradient-footer);
+  @apply transition-all duration-500;
+}
+
+.gradient-datetimer {
+  background: var(--gradient-datetimer);
+  @apply transition-all duration-500;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.bi-star-fill {
+  animation: float 3s ease-in-out infinite;
+}
+
+#mapId{
+  z-index: 10;
+}

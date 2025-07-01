@@ -1,0 +1,93 @@
+---
+import { slide } from "astro:transitions";
+
+// Puedes usar un array si las imágenes son dinámicas
+const images = [
+  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&auto=format", // Imágenes en alta resolución
+  "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format",
+  "https://images.unsplash.com/photo-1547483238-f400e65ccd56?w=800&auto=format",
+];
+---
+
+<div class="relative w-full max-w-3xl mx-auto">
+  <div
+    id="carousel"
+    class="flex overflow-x-hidden snap-x snap-mandatory scroll-auto rounded-md mask-b-from-70% mask-b-to-100% "
+  >
+    {
+      images.map((src, i) => (
+        <img
+          src={src}
+          alt={`Imagen ${i + 1}`}
+          class="snap-start flex-shrink-0 w-full aspect-[16/9] object-cover mx-auto transition-all duration-2000"
+          data-index={i}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Botones tipo barra -->
+  <div
+    class="flex justify-center items-center gap-4 mt-5"
+    id="carousel-indicators"
+  >
+    {
+      images.map((_, i) => (
+        <button
+          class="h-2 w-12 bg-gray-400/50 rounded-full hover:bg-gray-600 transition-colors duration-2000"
+          data-index={i}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<script type="module">
+  const carousel = document.getElementById("carousel");
+  const indicators = document.querySelectorAll("#carousel-indicators button");
+  const slides = carousel.querySelectorAll("img");
+
+  let index = 0;
+  const total = slides.length;
+
+  function updateActiveIndicator() {
+    const scrollLeft = carousel.scrollLeft;
+    const slideWidth = slides[0].clientWidth;
+    const currentIndex = Math.round(scrollLeft / slideWidth);
+
+    indicators.forEach((btn, i) => {
+      btn.classList.toggle("bg-white", i === currentIndex);
+      btn.classList.toggle("bg-gray-400/50", i !== currentIndex);
+    });
+  }
+
+  function goToSlide(i) {
+    const slideWidth = slides[0].clientWidth;
+    carousel.scrollTo({
+      left: slideWidth * i,
+      behavior: "smooth",
+    });
+    index = i;
+    updateActiveIndicator();
+  }
+
+  // Clic sobre botón para navegar a imagen correspondiente
+  indicators.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      goToSlide(parseInt(btn.dataset.index));
+    });
+  });
+
+  // Actualiza el botón activo al hacer scroll
+  carousel.addEventListener("scroll", () => {
+    requestAnimationFrame(updateActiveIndicator);
+  });
+
+  // Al cargar la página, activa el primero
+  window.addEventListener("DOMContentLoaded", updateActiveIndicator);
+
+  setInterval(() => {
+  index = (index + 1) % total;
+  goToSlide(index);
+}, 5000);
+</script>

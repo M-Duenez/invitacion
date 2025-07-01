@@ -1,0 +1,70 @@
+---
+// src/components/Countdown.astro
+interface Props {
+  targetDate: string | Date;
+}
+
+const { targetDate } = Astro.props;
+
+const parseDate = (input : any) => {
+  const date = typeof input === 'string' ? new Date(input) : input;
+  return isNaN(date.getTime()) ? new Date(Date.now() + 86400000) : date; // Fallback: 1 día después
+};
+
+const target = parseDate(targetDate);
+---
+
+<div 
+  class="countdown flex gap-x-8 md:gap-x-24 justify-center text-center font-sans"
+  data-timestamp={target.getTime()}
+>
+  <div class="countdown-item flex flex-col items-center ">
+    <span id="days" class="text-xl md:text-3xl font-bold text-[var(--color-text)]">00</span>
+    <span class="font-mono mt-3 text-sm md:text-md uppercase tracking-wider text-[var(--color-text)]">Días</span>
+  </div>
+  <div class="countdown-item flex flex-col items-center min-w-[60px]">
+    <span id="hours" class="text-xl md:text-3xl font-bold text-[var(--color-text)]">00</span>
+    <span class="font-mono mt-3 text-sm md:text-md uppercase tracking-wider text-[var(--color-text)]">Horas</span>
+  </div>
+  <div class="countdown-item flex flex-col items-center min-w-[60px]">
+    <span id="minutes" class="text-xl md:text-3xl font-bold text-[var(--color-text)]">00</span>
+    <span class="font-mono mt-3 text-sm md:text-md uppercase tracking-wider text-[var(--color-text)]">Minutos</span>
+  </div>
+  <div class="countdown-item flex flex-col items-center min-w-[60px]">
+    <span id="seconds" class="text-xl md:text-3xl font-bold text-[var(--color-text)]">00</span>
+    <span class="font-mono mt-3 text-sm md:text-md uppercase tracking-wider text-[var(--color-text)]">Segundos</span>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const container = document.querySelector('.countdown');
+    const targetDate = new Date(Number(container.dataset.timestamp));
+    
+    const update = () => {
+      const totalSeconds = Math.max(0, Math.floor((targetDate - new Date()) / 1000));
+      
+      if (totalSeconds <= 0) {
+        container.innerHTML = '<p>¡El evento ha comenzado!</p>';
+        return;
+      }
+
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      const format = (num) => String(num).padStart(2, '0');
+      
+      document.getElementById('days').textContent = format(days);
+      document.getElementById('hours').textContent = format(hours);
+      document.getElementById('minutes').textContent = format(minutes);
+      document.getElementById('seconds').textContent = format(seconds);
+    };
+
+    update();
+    const timer = setInterval(update, 1000);
+    window.addEventListener('beforeunload', () => clearInterval(timer));
+  })();
+</script>
+

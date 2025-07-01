@@ -1,0 +1,32 @@
+---
+import UbicacionIglesia from "./Mapas/mapa.iglesia.astro"
+
+const urlIglesia = "https://www.google.com.mx/maps/place/Parroquia+Inmaculada+Concepci%C3%B3n/@25.542811,-103.3350823,16.75z/data=!4m6!3m5!1s0x868fc4bff07656cd:0x11e269b864c384ef!8m2!3d25.5443193!4d-103.3363576!16s%2Fg%2F11bxbb0my7?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
+
+const urlSalon = "https://www.google.com.mx/maps/place/Sal%C3%B3n+Las+Palmas/@25.5448347,-103.3304367,17z/data=!4m6!3m5!1s0x868fc5ebf35e7bcb:0x698d85632cd69d52!8m2!3d25.5457413!4d-103.3298753!16s%2Fg%2F11f6yxwlfb?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
+
+---
+
+<div class="flex w-full md:w-200  bg-[var(--color-secondary)] opacity-100 px-1 rounded-lg ">
+    <div class="flex w-full flex-col md:flex-row justify-between p-5 md:py-2 gap-5 ">
+        <div class="flex flex-col w-full md:w-1/2 items-center bg-[var(--color-bg)] md:bg-transparent gap-y-1 px-2 py-10 rounded-md text-[var(--color-text)]">
+            <img src={"/iglesia-icon.png"} class="w-15 mb-3 [.dark_&]:hidden "></img>
+            <img src={"/iglesia-icon-blanco.png"} class="w-15 mb-3 hidden [.dark_&]:block"></img>
+            <p class="font-mono">Misa ceremonial </p>
+            <p class="font-mono">Hora: 05:00 PM </p>
+            <a href={urlIglesia} target="_blank" rel="noopener noreferrer" class="w-full h-auto mt-6"> <img src="/ubi-iglesia.jpg" alt=""> </a>
+            <p class="font-mono">Lugar </p>
+        </div>
+        <div class="hidden md:block h-auto rounded-full my-3 border-[4px] border-dashed border-[var(--color-text)]"></div>
+        <div class="flex flex-col w-full md:w-1/2  items-center bg-[var(--color-bg)] md:bg-transparent gap-y-1 px-2 py-10 md:mt-36 rounded-md text-[var(--color-text)]">
+            <img src={"/salon-icon.png"} class="w-15 mb-3 [.dark_&]:hidden "></img>
+            <img src={"/salon-icon-blanco.png"} class="w-15 mb-3 hidden [.dark_&]:block"></img>
+            <p class="font-mono">Recepción salon </p>
+            <p class="font-mono">Hora: 08:00 PM</p>
+            <a href={urlSalon} target="_blank" rel="noopener noreferrer" class="w-full h-auto mt-6"><img src="/ubi-salon.jpg" alt=""></a>
+            <p class="font-mono">Lugar </p>
+        </div>
+
+    </div>
+
+</div>

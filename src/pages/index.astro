@@ -1,0 +1,39 @@
+---
+import CardFotos from "../components/Card-fotos.astro";
+import Carrousel from "../components/Carrousel.astro";
+import CountDown from "../components/CountDown.astro";
+import Informacion from "../components/Informacion.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+
+// Formato ISO (recomendado)
+const fecha1 = "2025-09-26"; // AAAA-MM-DD
+
+const defaultImages = [
+  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&auto=format", // Imágenes en alta resolución
+  "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format",
+  "https://images.unsplash.com/photo-1547483238-f400e65ccd56?w=800&auto=format",
+];
+---
+
+<Layout>
+  <div class="flex flex-col h-screen w-full justify-start items-center px-5 mt-32 gap-y-30 mb-10">
+
+    <div class="flex w-full justify-center items-center ">
+      <h1>Hola mundo</h1>
+    </div>
+    <div class="flex w-full justify-center items-center ">
+      <Carrousel/>
+    </div>
+
+    <div class="flex w-full justify-center items-center ">
+      <div class="w-full md:w-170  bg-[var(--color-secondary)] opacity-85 p-6 rounded-lg shadow-lg shadow-white/70 mb-6">
+        <CountDown targetDate={fecha1} />
+      </div>
+    </div>
+
+    <div class="flex w-full justify-center items-center">
+      <Informacion/>
+    </div>
+  </div>
+</Layout>

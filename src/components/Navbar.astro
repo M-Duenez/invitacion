@@ -1,0 +1,91 @@
+---
+import TemaBoton from "./TemaBoton.astro";
+import CoronaLogo from "../components/corona-logo.astro";
+
+const { nombre } = Astro.props;
+
+const { pathname } = Astro.url
+
+// Lista de rutas donde NO debe aparecer el logo
+const hideLogoRoutes = ['/']
+const shouldShowLogo = !hideLogoRoutes.includes(pathname)
+
+// Comprueba si la ruta actual está activa
+const isActive = (path: string) => pathname === path
+---
+
+<header
+  class="fixed top-0 z-50 flex h-20 w-full md:h-20 select-none items-center text-[var(--color-text)]  sm:overflow-hidden"
+>
+  <div class="relative flex justify-between items-center px-6 py-4 w-full">
+
+    <nav id="navContent" class=" flex w-full justify-between">
+      <div class="flex items-center gap-x-3">
+      <CoronaLogo />
+      <h1 class="text-xl md:text-2xl font-bold">{nombre}</h1>
+    </div>
+
+    <div class="flex gap-2">
+      <TemaBoton />
+    </div>
+          
+
+    </nav>
+  </div>
+</header>
+
+<!-- <nav class="fixed top-0 z-50 flex w-full gradient-element transition-all duration-300 px-3 md:px-5 py-2 md:py-4">
+  <div class="relative flex w-full justify-between items-center">
+    <div class="flex items-center gap-x-3">
+      <CoronaLogo />
+      <h1 class="text-xl font-bold">{nombre}</h1>
+    </div>
+
+    <div class="flex gap-2">
+      <TemaBoton />
+    </div>
+  </div>
+</nav> -->
+
+<style>
+  header {
+    background: transparent;
+    animation: header-blur-scroll 0.3s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 30px;
+    border-bottom: 1px solid transparent;
+  }
+
+  @keyframes header-blur-scroll {
+    100% {
+      backdrop-filter: blur(20px);
+      background: transparent;
+      text-align: center;
+      padding-bottom: var(--spacing-6);
+    }
+
+    0% {
+      backdrop-filter: blur(0px);
+      background: var(--gradient-secondary);
+      
+    }
+  }
+
+  #navContent {
+    transition:
+      translate 0.3s ease-in-out,
+      visibility 0.3s 0.3s;
+  }
+
+  #navContent.showing {
+    visibility: visible;
+    translate: 0 0;
+    transition:
+      translate 0.3s ease-in-out,
+      visibility 0.3s;
+  }
+
+  .logo-glow-teal {
+    filter: drop-shadow(0 0 6px #14b8a6) drop-shadow(0 0 1px #fff);
+  }
+</style>
