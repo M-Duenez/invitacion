@@ -4,32 +4,29 @@ import CoronaLogo from "../components/corona-logo.astro";
 
 const { nombre } = Astro.props;
 
-const { pathname } = Astro.url
+const { pathname } = Astro.url;
 
 // Lista de rutas donde NO debe aparecer el logo
-const hideLogoRoutes = ['/']
-const shouldShowLogo = !hideLogoRoutes.includes(pathname)
+const hideLogoRoutes = ["/"];
+const shouldShowLogo = !hideLogoRoutes.includes(pathname);
 
 // Comprueba si la ruta actual está activa
-const isActive = (path: string) => pathname === path
+const isActive = (path: string) => pathname === path;
 ---
 
 <header
-  class="fixed top-0 z-50 flex h-20 w-full md:h-20 select-none items-center text-[var(--color-text)]  sm:overflow-hidden"
+  class="fixed top-0 z-50 flex h-20 w-full md:h-20 select-none items-center text-[var(--color-text)] sm:overflow-hidden"
 >
   <div class="relative flex justify-between items-center px-6 py-4 w-full">
-
-    <nav id="navContent" class=" flex w-full justify-between">
+    <nav id="navContent" class="flex w-full justify-between">
       <div class="flex items-center gap-x-3">
-      <CoronaLogo />
+        <CoronaLogo />
+      </div>
+      
       <h1 class="text-xl md:text-2xl font-bold">{nombre}</h1>
-    </div>
-
-    <div class="flex gap-2">
-      <TemaBoton />
-    </div>
-          
-
+      <div class="flex gap-2">
+        <TemaBoton />
+      </div>
     </nav>
   </div>
 </header>
@@ -67,7 +64,6 @@ const isActive = (path: string) => pathname === path
     0% {
       backdrop-filter: blur(0px);
       background: var(--gradient-secondary);
-      
     }
   }
 
