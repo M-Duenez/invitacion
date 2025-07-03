@@ -17,23 +17,32 @@ const defaultImages = [
 ---
 
 <Layout>
-  <div class="flex flex-col h-screen w-full justify-start items-center px-5 mt-32 gap-y-30 mb-10">
-
-    <div class="flex w-full justify-center items-center ">
+  <div
+    class="flex flex-col h-screen w-full justify-start items-center px-5 mt-32 gap-y-30 mb-10"
+  >
+    <div class="flex flex-col w-full justify-center items-center">
       <h1>Descripción</h1>
+      <iframe
+        src="https://drive.google.com/file/d/1wKILM_Cw8RI99httAE-5zEeVr1uOy5hd/preview"
+        width="360"
+        height="55"
+        allow="autoplay"
+        frameborder="0"></iframe>
     </div>
-    <div class="flex w-full justify-center items-center ">
-      <Carrousel/>
+    <div class="flex w-full justify-center items-center">
+      <Carrousel />
     </div>
 
-    <div class="flex w-full justify-center items-center ">
-      <div class="w-full md:w-170  bg-[var(--color-secondary)] opacity-85 p-6 rounded-lg shadow-lg shadow-white/70 mb-6">
+    <div class="flex w-full justify-center items-center">
+      <div
+        class="w-full md:w-170 bg-[var(--color-secondary)] opacity-85 p-6 rounded-lg shadow-lg shadow-white/70 mb-6"
+      >
         <CountDown targetDate={fecha1} />
       </div>
     </div>
 
     <div class="flex w-full justify-center items-center">
-      <Informacion/>
+      <Informacion />
     </div>
   </div>
 </Layout>
