@@ -4,6 +4,9 @@ export default {
   darkMode: 'class', // Usamos class en lugar de media para control manual
   theme: {
     extend: {
+      fontFamily: {
+        dancing: ['"Dancing Script"', 'cursive'],
+      },
       colors: {
         // Tema light - rosa pastel
         light: {

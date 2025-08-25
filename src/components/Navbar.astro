@@ -14,20 +14,25 @@ const shouldShowLogo = !hideLogoRoutes.includes(pathname);
 const isActive = (path: string) => pathname === path;
 ---
 
-<header
-  class="fixed top-0 z-50 flex h-20 w-full md:h-20 select-none items-center text-[var(--color-text)] sm:overflow-hidden"
->
-  <div class="relative flex justify-between items-center px-6 py-4 w-full">
-    <nav id="navContent" class="flex w-full justify-between">
-      <div class="flex items-center gap-x-3">
-        <CoronaLogo />
-      </div>
-      
-      <h1 class="flex items-center justify-center text-md md:text-2xl font-bold">{nombre}</h1>
-      <div class="flex gap-2">
-        <TemaBoton />
+<header class="fixed top-0 left-0 w-full z-50 shadow">
+  <div class="relative flex justify-between items-center w-full">
+    <!-- Imagen inicial -->
+    <div id="navbarImage" class="flex w-full transition-opacity duration-700 ease-in-out opacity-100">
+      <img src="/portada-2.png" alt="Portada" class="absolute" />
+    </div>
+    <nav
+      id="navbarContent"
+      class="navbar flex absolute w-full h-20 top-0 left-0 pt-2 justify-between items-center shadow navbar-hidden bg-white/20 backdrop-blur-md transition-opacity duration-700 ease-in-out opacity-100"
+    >
+      <div class="flex w-full justify-between items-center">
+        <img src="/icono-xv-bg.png" class="w-25 h-20" alt="" />
+        <h1 class="fixed w-full top-7 left-35 right-40 text-4xl titulo">Hillari sofia</h1>
+        <div></div>
       </div>
     </nav>
+    <div class="fixed right-3 top-3 gap-2">
+      <TemaBoton />
+    </div>
   </div>
 </header>
 
@@ -45,43 +50,29 @@ const isActive = (path: string) => pathname === path;
 </nav> -->
 
 <style>
-  header {
-    background: transparent;
-    animation: header-blur-scroll 0.3s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 30px;
-    border-bottom: 1px solid transparent;
+  .navbar {
+    transition: all 0.7s ease;
   }
-
-  @keyframes header-blur-scroll {
-    100% {
-      backdrop-filter: blur(20px);
-      background: transparent;
-      text-align: center;
-      padding-bottom: var(--spacing-6);
-    }
-
-    0% {
-      backdrop-filter: blur(0px);
-      background: var(--gradient-secondary);
-    }
-  }
-
-  #navContent {
-    transition:
-      translate 0.3s ease-in-out,
-      visibility 0.3s 0.3s;
-  }
-
-  #navContent.showing {
-    visibility: visible;
-    translate: 0 0;
-    transition:
-      translate 0.3s ease-in-out,
-      visibility 0.3s;
-  }
-
-  .logo-glow-teal {
-    filter: drop-shadow(0 0 6px #14b8a6) drop-shadow(0 0 1px #fff);
+  .navbar-hidden {
+    opacity: 0;
+    transform: translateY(-30px);
+    pointer-events: none;
   }
 </style>
+
+<script>
+  const navbarImage: any = document.getElementById("navbarImage");
+  const navbarContent: any = document.getElementById("navbarContent");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 90) {
+      // Ocultar imagen, mostrar logo + contenido
+      navbarImage.classList.add("navbar-hidden");
+      navbarContent.classList.remove("navbar-hidden");
+    } else {
+      // Mostrar imagen, ocultar contenido
+      navbarImage.classList.remove("navbar-hidden");
+      navbarContent.classList.add("navbar-hidden");
+    }
+  });
+</script>

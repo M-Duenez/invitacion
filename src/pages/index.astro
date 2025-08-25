@@ -7,42 +7,63 @@ import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Formato ISO (recomendado)
-const fecha1 = "2025-09-26"; // AAAA-MM-DD
+const fecha1 = "2025-09-20"; // AAAA-MM-DD
 
 const defaultImages = [
-  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&auto=format", // Imágenes en alta resolución
-  "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format",
-  "https://images.unsplash.com/photo-1547483238-f400e65ccd56?w=800&auto=format",
+  "/galeria/1.png",
 ];
 ---
 
 <Layout>
   <div
-    class="flex flex-col h-screen w-full justify-start items-center px-5 mt-32 gap-y-30 mb-10"
+    class="flex flex-col h-screen w-full justify-start items-center px-5 pt-64 gap-y-30 mb-10"
   >
-    <div class="flex flex-col w-full justify-center items-center">
-      <h1>Descripción</h1>
-      <iframe
-        src="https://drive.google.com/file/d/1wKILM_Cw8RI99httAE-5zEeVr1uOy5hd/preview"
-        width="360"
-        height="55"
-        allow="autoplay"
-        frameborder="0"></iframe>
+    <div class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] px-4 py-2 rounded opacity-85 gap-y-2">
+      <p class="titulo text-5xl">-Te Invitamos-</p>
+      <p class="flex text-md justify-center text-center">
+        Con la bendición de Dios, de mis padre</p> 
+      <p>Erick Torres</p> 
+      <p>Jessica Acosta.</p> 
+      <p>Queremos que sean parte de este momento tan especial que es la
+        celebración de mis quince años. 
+      </p>
+      <p class="text-3xl titulo mb-5">¡Prepárate! Faltan...</p>
+      
+      <CountDown targetDate={fecha1} />
     </div>
+    <!-- <div class="flex w-full justify-center items-center">
+      <div
+        class="w-full md:w-170 bg-[var(--color-secondary)] p-6 rounded-lg shadow-lg shadow-white/70 mb-6"
+      >
+        <CountDown targetDate={fecha1} />
+      </div>
+    </div> -->
     <div class="flex w-full justify-center items-center">
       <Carrousel />
     </div>
 
-    <div class="flex w-full justify-center items-center">
-      <div
-        class="w-full md:w-170 bg-[var(--color-secondary)] opacity-85 p-6 rounded-lg shadow-lg shadow-white/70 mb-6"
-      >
-        <CountDown targetDate={fecha1} />
-      </div>
-    </div>
 
     <div class="flex w-full justify-center items-center">
       <Informacion />
     </div>
   </div>
 </Layout>
+
+<script>
+  const audio: any = document.getElementById("myAudio");
+  const btn: any = document.getElementById("audioBtn");
+  const playIcon: any = document.getElementById("playIcon");
+  const pauseIcon: any = document.getElementById("pauseIcon");
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playIcon.classList.add("hidden");
+      pauseIcon.classList.remove("hidden");
+    } else {
+      audio.pause();
+      playIcon.classList.remove("hidden");
+      pauseIcon.classList.add("hidden");
+    }
+  });
+</script>

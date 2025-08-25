@@ -1,14 +1,26 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.titulo {
+  font-family: 'Dancing Script', cursive;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 :root {
-  --color-bg: #ffe3e7; /* light-bg */
-  --color-text: #333333; /* light-text */
+  --color-bg: #b76e79; /* light-bg */
+  --color-text: #000; /* light-text */
   --color-primary: #f8bbd0; /* light-primary */
-  --color-secondary: #f48fb1; /* light-secondary */
-  --color-accent: #f06292; /* light-accent */
-  --color-btntema: #ffc0cb;
+  --color-secondary: #f1c6cc; /* light-secondary */
+  --color-accent: #b76e79; /* light-accent */
+  --color-btntema: #b76e79;
   --color-start: #f06292;
-  --gradient-secondary: linear-gradient(135deg, var(--color-secondary), #ffc0cb);
+  --gradient-secondary: linear-gradient(135deg, #b76e79, #f1c6cc);
   --gradient-footer: linear-gradient(135deg, #ffc0cb, var(--color-secondary));
   --gradient-datetimer: liner-gradient(
     135deg,

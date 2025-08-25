@@ -22,17 +22,59 @@ const height = 2150;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body class="font-mono">
-    <div class=`flex flex-col h-[2150px] w-full justify-between `>
+    <div class=`flex flex-col h-[2300px] w-full justify-between `>
       <Navbar nombre="Celebración de mis XV años" />
 
+      <div class="fixed right-2 top-42 z-50 gap-4">
+        <!-- Botón de Play/Pause -->
+        <button
+          id="audioBtn"
+          class="w-14 h-14 flex items-center justify-center rounded-full bg-black hover:bg-black text-white shadow-lg transition"
+        >
+          <!-- Icono Play por defecto -->
+          <svg
+            id="playIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+          <!-- Icono Pause oculto -->
+          <svg
+            id="pauseIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 hidden"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+          </svg>
+        </button>
+
+        <!-- Reproductor de audio oculto -->
+        <audio
+          id="myAudio"
+          src="https://www.googleapis.com/drive/v3/files/1sho-ro9Tz_NyhXJ-d39rY9xA87-MoL-t?
+alt=media&key=AIzaSyDVMziNb-IQImPRTVxWJEIvZaIi2WWHRW8"
+        >
+        </audio>
+      </div>
+
       <div class="flex w-full h-full z-40 mb-30">
-        <slot/>
+        <slot />
       </div>
 
       <footer
-        class="flex w-full h-auto justify-center items-center py-5 gradient-footer text-[var(--color-text)]"
+        class="flex w-full h-auto justify-center items-center py-5 gradient-footer text-black dark:text-[var(--color-text)]"
       >
         Te espero en mi fiesta
       </footer>
@@ -44,7 +86,7 @@ const height = 2150;
 
       // Tamaño personalizado (puede ser fijo o dinámico)
       const width = window.innerWidth - 30; // px
-      const height = 2050// px
+      const height = 2160; // px
 
       for (let i = 0; i < total; i++) {
         const star = document.createElement("i");
