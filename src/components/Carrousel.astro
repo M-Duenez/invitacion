@@ -15,16 +15,18 @@ const images = [
 ---
 
 <div class="relative w-full max-w-3xl mx-auto">
+  
   <div
     id="carousel"
     class="flex overflow-x-hidden snap-x snap-mandatory scroll-auto rounded-md mask-b-from-100% mask-b-to-100%"
   >
+  
     {
       images.map((src, i) => (
         <img
           src={src}
           alt={`Imagen ${i + 1}`}
-          class="snap-start flex-shrink-0 w-full aspect-[16/9] object-cover mx-auto transition-all duration-2000"
+          class="snap-start flex-shrink-0 w-full aspect-[16/9] object-cover mx-auto transition-all duration-1000"
           data-index={i}
         />
       ))
