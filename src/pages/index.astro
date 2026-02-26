@@ -1,169 +1,24 @@
 ---
-import CardFotos from "../components/Card-fotos.astro";
-import Carrousel from "../components/Carrousel.astro";
-import CountDown from "../components/CountDown.astro";
-import Informacion from "../components/Informacion.astro";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Section from "../components/boda/Section.astro";
+import OpenCard from "../components/boda/OpenCard";
+import AnimatedNames from "../components/boda/AnimatedNames";
+import CountDownElegant from "../components/boda/CountDownDate";
+import Stars from "../components/boda/Stars";
+import MagicDust from "../components/boda/MagicDust";
+import Constellation from "../components/boda/Constellation";
+import Rings from "../components/boda/Rings";
+import Hero from "../components/boda/Hero.astro";
+import CoverImage from "../components/boda/CoverImage";
 
-// Formato ISO (recomendado)
-const fecha1 = "2025-09-20"; // AAAA-MM-DD
-
-const defaultImages = ["/galeria/1.png"];
+const fechaBoda = "2026-10-02T21:00:00";
 ---
 
 <Layout>
-  <div
-    class="flex flex-col h-screen w-full justify-start items-center px-5 pt-64 gap-y-14 mb-10"
-  >
-    <div
-      class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] px-4 py-5 pb-6 rounded opacity-95 gap-y-5"
-    >
-      <p class="titulo text-5xl"><b>-Te Invitamos-</b></p>
-      <div class="flex flex-col justify-center items-center w-full gap-y-2">
-        <p class="text-center">Con la bendición de Dios, de mis padre</p>
-        <p class="text-center">Erick Torres</p>
-        <p class="text-center">Jessica Acosta.</p>
-        <p class="text-center">
-          Queremos que sean parte de este momento tan especial que es la
-          celebración de mis quince años.
-        </p>
-        <p class="text-3xl titulo text-center mb-5">¡Prepárate! Faltan...</p>
-
-        <script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script><a data-type="countdown" data-id="7932904" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="My countdown" href="//www.tickcounter.com/">My countdown</a>
-
-      </div>
-    </div>
-    <!-- <div class="flex w-full justify-center items-center">
-      <div
-        class="w-full md:w-170 bg-[var(--color-secondary)] p-6 rounded-lg shadow-lg shadow-white/70 mb-6"
-      >
-        <CountDown targetDate={fecha1} />
-      </div>
-    </div> -->
-    <div class="flex w-full flex-col justify-center items-center">
-      <img src="/gif/gif-galeria.gif" alt="" width="150" height="60" />
-    </div>
-    <div
-      class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] rounded opacity-95 py-4 gap-y-4"
-    >
-      <h1 class="text-5xl font-bold titulo mb-3">Galeria de fotos</h1>
-      <Carrousel />
-    </div>
-
-    <div class="flex w-full flex-col justify-center items-center">
-      <img
-        src="/gif/gif-icono-iglesia-dark.gif"
-        alt=""
-        width="150"
-        height="60"
-      />
-    </div>
-    <div
-      class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] px-4 py-5 rounded opacity-95 gap-y-5"
-    >
-      <p class="titulo text-5xl"><b>Ceremonia</b></p>
-      <div class="flex flex-col justify-center items-center w-full gap-y-2">
-        <p class="flex text-md justify-center text-center">
-          La misa se llevará acabo en la
-        </p>
-        <p class="text-center"><b>Parroquia San Judas Tadeo</b></p>
-        <p class="text-3xl titulo text-center">20 septiembre | 6:00 p.m.</p>
-        <p class="text-center">
-          Torre de Cristo 333, Residencial las Torres Sector II, 27085 Torreón,
-          Coah.
-        </p>
-
-      </div>
-      <a href="https://maps.app.goo.gl/tCJ7ctuFBAG3mgBG8" type="button" class="flex w-full justify-center rounded py-3 bg-[#B76E79] text-white text-lg">Ver ubicación</a>
-    </div>
-
-    <div class="flex w-full flex-col justify-center items-center">
-      <img
-        src="/gif/gif-icono-fiesta-dark.gif"
-        alt=""
-        width="150"
-        height="60"
-      />
-    </div>
-    <div
-      class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] px-4 py-5 rounded opacity-95 gap-y-5"
-    >
-      <p class="titulo text-5xl"><b>Celebración</b></p>
-      <div class="flex flex-col justify-center items-center w-full gap-y-2">
-        <p class="text-center">El evento se realizará en el</p>
-        <p><b>Salón de Eventos Monarca</b></p>
-        <p class="text-3xl titulo">20 septiembre | 8:40 p.m.</p>
-        <p class="text-center">
-          Cto. Laguna de Mayran, Montebello, 27277 Torreón, Coah.
-        </p>
-      </div>
-      <a href="https://maps.app.goo.gl/YYAF4oPWo4Q95upq8" type="button" class="flex w-full justify-center rounded py-3 bg-[#B76E79] text-white text-lg">Ver ubicación</a>
-    </div>
-
-    <div class="flex w-full flex-col justify-center items-center">
-      <img
-        src="/gif/gif-icono-vestimenta-dark.gif"
-        alt=""
-        width="150"
-        height="60"
-      />
-    </div>
-    <div
-      class="flex w-full flex-col justify-center items-center bg-[var(--color-secondary)] px-4 py-5 rounded opacity-95 gap-y-5"
-    >
-      <p class="titulo text-[44px]"><b>Código de vestimenta</b></p>
-      <div class="flex flex-col justify-center items-center w-full text-center gap-y-2">
-        <b>Queridos familiares y amigos:</b>
-        <p>
-          Para que este día tan especial luzca aún más hermoso, queremos
-          pedirles de corazón que respeten el <b>código de vestimenta</b> de la celebración.
-        </p>
-        <p>
-          En especial, les solicitamos evitar el uso del <b>color rosa en
-          cualquiera de sus tonalidades</b>, ya que ha sido reservado exclusivamente
-          para nuestra quinceañera, quien será la protagonista de esta noche.
-        </p>
-        <p>
-          Gracias por su apoyo y cariño, y por ayudarnos a que este momento se
-          viva con la magia y la alegría que merece.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex w-full flex-col justify-center items-center">
-      <img
-        src="/gif/gif-icono-asistencia-dark.gif"
-        alt=""
-        width="150"
-        height="60"
-      />
-    </div>
-    <div class="flex flex-col w-full justify-center items-center text-center gap-y-5">
-      <p class="text-5xl font-bold text-white titulo">¡Esperamos tu confirmación de asistencia!</p>
-      <a href="https://api.whatsapp.com/send?phone=528713928139&text=Buen%20d%C3%ADa,%20Confirmo%20mi%20asistencia." type="button" class="flex w-full justify-center rounded py-3 gradient-footer text-[var(--color-text)] text-lg">Confirmar asistencia</a>
-    </div>
-    <!-- <div class="flex w-full justify-center items-center">
-      <Informacion />
-    </div> -->
-  </div>
+  <!-- <OpenCard client:load> -->
+    <CoverImage client:load/>
+    <Hero />
+    <h2 class="text-4xl text-gold-500 mb-6">La Fecha</h2>
+    <p>24 de Agosto 2026 · 7:00 PM</p>
+  <!-- </OpenCard> -->
 </Layout>
-
-<script>
-  const audio: any = document.getElementById("myAudio");
-  const btn: any = document.getElementById("audioBtn");
-  const playIcon: any = document.getElementById("playIcon");
-  const pauseIcon: any = document.getElementById("pauseIcon");
-
-  btn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playIcon.classList.add("hidden");
-      pauseIcon.classList.remove("hidden");
-    } else {
-      audio.pause();
-      playIcon.classList.remove("hidden");
-      pauseIcon.classList.add("hidden");
-    }
-  });
-</script>

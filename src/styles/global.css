@@ -1,93 +1,87 @@
 @import "tailwindcss";
+/* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+@theme {
+  /* Navy */
+  --color-navy-950: #0A1626;
+  --color-navy-900: #0F1E33;
+  --color-navy-800: #162A46;
+
+  /* Blanco cálido */
+  --color-ivory-50: #F8F6F1;
+  --color-ivory-100: #F1ECE3;
+
+  /* Gold */
+  --color-gold-300: #E8D8B3;
+  --color-gold-400: #D4B97A;
+  --color-gold-500: #C6A75E;
+  --color-gold-600: #9F7F2E;
+
+  /* Neutrals */
+  --color-wedding-ivory: #F5F2EB;
+  --color-wedding-smoke: #B8BCC5;
+
+  /* Blanco base */
+  --color-cream-50: #FAF9F6;
+  --color-cream-100: #F5F2EB;
+
+  /* Texto oscuro suave */
+  --color-charcoal-800: #2B2B2B;
+  
+  /* Café suave para texto */
+  --color-earth-700: #4A3F35;
+  --color-earth-800: #3A3129;
+}
+
+/* ============================= */
+/* ✨ FONDO NOCTURNO GLOBAL */
+/* ============================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(
+      circle at 50% 30%,
+      rgba(198, 167, 94, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #0A1626,
+      #0F1E33,
+      #000000
+    );
+  color: var(--color-wedding-ivory);
+  min-height: 100vh;
+}
+
+body.intro-active {
+  overflow: hidden;
+}
+
 
 .titulo {
   font-family: 'Dancing Script', cursive;
 }
 
 
-body {
-  font-family: 'Roboto', sans-serif;
+@keyframes aurora {
+  0% { transform: translateX(-10%) scale(1); opacity: 0.3; }
+  50% { transform: translateX(10%) scale(1.2); opacity: 0.6; }
+  100% { transform: translateX(-10%) scale(1); opacity: 0.3; }
 }
 
-
-:root {
-  --color-bg: #b76e79; /* light-bg */
-  --color-text: #000; /* light-text */
-  --color-primary: #f8bbd0; /* light-primary */
-  --color-secondary: #f1c6cc; /* light-secondary */
-  --color-accent: #b76e79; /* light-accent */
-  --color-btntema: #b76e79;
-  --color-start: #f06292;
-  --gradient-secondary: linear-gradient(135deg, #b76e79, #f1c6cc);
-  --gradient-footer: linear-gradient(135deg, #ffc0cb, var(--color-secondary));
-  --gradient-datetimer: liner-gradient(
-    135deg,
-    var(--color-primary),
-    #f8bbd0,
-    var(--color-primary)
-  );
-}
-
-.dark {
-  --color-bg: #1a0333; /* dark-bg */
-  --color-text: #ffffff; /* dark-text */
-  --color-primary: #7b1fa2; /* dark-primary */
-  --color-secondary: #9c27b0; /* dark-secondary */
-  --color-accent: #ba68c8; /* dark-accent */
-  --color-btntema: #9c27b0;
-  --color-start: #ffd700;
-  --gradient-secondary: linear-gradient(
-    135deg,
-    #4a148c,
-    #6d2599,
-    var(--color-secondary)
-  );
-  --gradient-footer: linear-gradient(
-    135deg,
-    var(--color-secondary),
-    #6d2599,
-    #4a148c
-  );
-  --gradient-datetimer: linear-gradient(
-    45deg,
-    var(--color-primary),
-    #9476bb
-  );
-}
-
-body {
-  @apply bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300; 
-}
-
-/* Ejemplo de uso en un elemento (botón/card) */
-.gradient-element {
-  background: var(--gradient-secondary);
-  @apply transition-all duration-500;
-}
-
-.gradient-footer {
-  background: var(--gradient-footer);
-  @apply transition-all duration-500;
-}
-
-.gradient-datetimer {
-  background: var(--gradient-datetimer);
-  @apply transition-all duration-500;
-}
-
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.bi-star-fill {
-  animation: float 3s ease-in-out infinite;
-}
-
-#mapId{
-  z-index: 10;
+.aurora {
+  position: absolute;
+  width: 120%;
+  height: 60%;
+  top: 20%;
+  background: radial-gradient(circle at center, rgba(198,167,94,0.3), transparent 70%);
+  filter: blur(120px);
+  animation: aurora 12s ease-in-out infinite;
 }

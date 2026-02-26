@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography'
+
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: 'class', // Usamos class en lugar de media para control manual
@@ -9,23 +11,24 @@ export default {
       },
       colors: {
         // Tema light - rosa pastel
-        light: {
-          bg: '#ffebee',
-          text: '#000000',
-          primary: '#f8bbd0',
-          secondary: '#f48fb1',
-          accent: '#f06292',
+        navy: {
+          950: "#0A1626",
+          900: "#0F1E33",
+          800: "#162A46",
         },
-        // Tema dark - violeta
-        dark: {
-          bg: '#1a0333',
-          text: '#ffffff',
-          primary: '#7b1fa2',
-          secondary: '#9c27b0',
-          accent: '#ba68c8',
-        }
+        gold: {
+          500: "#C6A75E",
+          600: "#9F7F2E",
+          300: "#E8D8B3",
+          200: "#F1E4C3",
+        },
+        wedding: {
+          ivory: "#F5F2EB",
+          smoke: "#B8BCC5",
+          dark: "#1C1F26",
+        },
       }
     },
   },
-  plugins: [],
+  plugins: [typography],
 }
