@@ -27,7 +27,7 @@ export default function CountDownElegant({ date }: { date: string }) {
   }, []);
 
   return (
-    <div className="flex justify-center gap-8 text-center mt-12">
+    <div className="flex justify-center gap-8 text-center">
       {Object.entries(timeLeft).map(([key, value]) => (
         <div key={key} className="flex flex-col">
           <span className="text-4xl text-gold-500 font-bold">
