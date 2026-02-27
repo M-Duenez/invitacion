@@ -18,20 +18,20 @@ export default function CoverImage() {
 
       <img
         ref={imgRef}
-        src="/boda/3.jpg"
+        src="/boda/7.jpg"
         alt="Yulissa y Miguel"
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full
               object-cover
-              object-[85%_30%]
+              object-[15%_30%]
               scale-125 md:scale-100
               transition duration-1000 ease-out ${imageLoaded ? "blur-0" : "blur-md"
           }`}
       />
 
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
 
-      <div className="relative z-10 flex items-center justify-start pl-12 md:pl-52 h-full">
+      <div className="relative z-10 flex items-start justify-center pt-8 h-full">
         <div className="text-center">
 
           {imageLoaded && (
@@ -40,11 +40,11 @@ export default function CoverImage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5 }}
             >
-              <p class="uppercase tracking-[0.4em] text-gold-500 text-sm md:text-lg mb-6">
-                Nuestra Boda
+              <p class="uppercase tracking-[0.9em] text-ivory-50 text-lg md:text-lg mb-4">
+                Nos casamos
               </p>
               <AnimatedNames />
-              <Rings />
+              {/* <Rings /> */}
             </motion.div>
           )}
 
@@ -53,7 +53,7 @@ export default function CoverImage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="animate-bounce text-gold-500 mt-10 text-sm tracking-widest"
+              className="animate-bounce mt-[580px] text-ivory-50 text-sm tracking-widest"
             >
               Desliza hacia abajo
             </motion.div>

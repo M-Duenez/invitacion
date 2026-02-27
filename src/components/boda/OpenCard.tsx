@@ -12,9 +12,9 @@ export default function OpenCard({ children }: any) {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-navy-950">
+    <div className="relative min-h-screen flex items-center justify-center bg-ivory-100">
 
-      <audio ref={audioRef} src="/music.mp3" loop />
+      {/* <audio ref={audioRef} src="/music.mp3" loop /> */}
 
       {!open ? (
         <Seal onOpen={handleOpen} />
