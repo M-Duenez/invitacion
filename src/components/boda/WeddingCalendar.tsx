@@ -24,8 +24,8 @@ export default function WeddingCalendar({ date }: Props) {
                  rounded-xl
                  px-10 py-8
                  bg-white/60 backdrop-blur-sm
-                 shadow-navy-800
-                 shadow-[0_10px_40px_rgba(0,0,0,0.8)]"
+                 shadow-navy-800/80
+                 shadow-[10px_10px_1px_rgba(0,0,0,0.8)]"
     >
       <span className="text-gold-500 tracking-[0.3em] text-sm mb-2">
         {month}

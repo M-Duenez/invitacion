@@ -39,12 +39,12 @@ export default function WeddingMonthCalendar({ date }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className="bg-white/70 backdrop-blur-sm
+            className="bg-white backdrop-blur-sm
                  border border-gold-500/40
                  rounded-xl
-                 p-8
+                 p-6
                  shadow-navy-800
-                 shadow-[0_10px_40px_rgba(0,0,0,0.5)]
+                 shadow-[10px_10px_1px_5px_rgba(0,0,0,0.8)]
                  max-w-md mx-auto"
         >
             <h3 className="text-center text-gold-600 tracking-[0.3em] mb-6">
