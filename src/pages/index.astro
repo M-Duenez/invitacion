@@ -16,7 +16,7 @@ import WeddingCalendar from "../components/boda/WeddingCalendar";
 import type { date } from "astro:schema";
 import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 
-const fechaBoda = "2026-10-02T21:00:00";
+const fechaBoda = "2026-10-02T21:00:00-06:00";
 ---
 
 <Layout>
@@ -45,7 +45,7 @@ const fechaBoda = "2026-10-02T21:00:00";
         >
           FALTAN
         </p>
-        <CountDownDate date={fechaBoda} />
+        <CountDownDate client:load date={fechaBoda} />
       </FadeInOnScroll>
     </div>
 

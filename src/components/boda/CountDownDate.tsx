@@ -1,37 +1,47 @@
 import { useEffect, useState } from "react";
 
-export default function CountDownElegant({ date }: { date: string }) {
-  const calculate = () => {
-    const difference = +new Date(date) - +new Date();
-    let time = { dias: 0, horas: 0, minutos: 0, segundos: 0 };
+interface TimeLeft {
+  dias: number;
+  horas: number;
+  minutos: number;
+  segundos: number;
+}
 
-    if (difference > 0) {
-      time = {
-        dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutos: Math.floor((difference / 1000 / 60) % 60),
-        segundos: Math.floor((difference / 1000) % 60),
-      };
+export default function CountDownElegant({ date }: { date: string }) {
+  const targetDate = new Date(date).getTime();
+
+  const calculateTimeLeft = (): TimeLeft => {
+    const now = Date.now();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      return { dias: 0, horas: 0, minutos: 0, segundos: 0 };
     }
-    return time;
+
+    return {
+      dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutos: Math.floor((difference / (1000 * 60)) % 60),
+      segundos: Math.floor((difference / 1000) % 60),
+    };
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculate());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculate());
+    const interval = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(interval);
+  }, [targetDate]);
 
   return (
     <div className="flex justify-center gap-7 text-center">
       {Object.entries(timeLeft).map(([key, value]) => (
         <div key={key} className="flex flex-col">
           <span className="text-4xl text-gold-500 font-bold">
-            {value}
+            {value.toString().padStart(2, "0")}
           </span>
           <span className="text-gold-400 uppercase text-xs tracking-widest">
             {key}
