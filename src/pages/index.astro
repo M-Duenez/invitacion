@@ -21,34 +21,36 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
 ---
 
 <Layout>
-  <!-- <OpenCard client:load> -->
-  <CoverImage client:load />
+  <OpenCard client:load>
+    <CoverImage client:load />
 
-  <FadeInOnScroll client:load>
-    <div class="flex flex-col max-w-xs md:max-w-lg mx-auto m-10 gap-y-5">
-      <p class="text-md text-center text-navy-950 leading-relaxed">
-        Dios nos ha concedido el privilegio de conocernos y amarnos, con su
-        bendición y la de nuestros padres queremos unir nuestras vidas para
-        seimpre.
-      </p>
-      <p class="titulo text-center text-4xl text-gold-600">
-        ¡Los invitamos a acompanarnos en este dia tan especial!
-      </p>
-    </div>
-  </FadeInOnScroll>
-
-  <div class="flex w-full h-auto py-16 bg-navy-800 items-center justify-center">
-    <FadeInOnScroll client:load delay={0.5}>
-      <p
-        class="flex w-full items-start justify-center text-xl text-gold-300 mb-5"
-      >
-        FALTAN
-      </p>
-      <CountDownDate client:load date={fechaBoda} />
+    <FadeInOnScroll client:load>
+      <div class="flex flex-col max-w-xs md:max-w-lg mx-auto m-10 gap-y-5">
+        <p class="text-md text-center text-navy-950 leading-relaxed">
+          Dios nos ha concedido el privilegio de conocernos y amarnos, con su
+          bendición y la de nuestros padres queremos unir nuestras vidas para
+          seimpre.
+        </p>
+        <p class="titulo text-center text-4xl text-gold-600">
+          ¡Los invitamos a acompanarnos en este dia tan especial!
+        </p>
+      </div>
     </FadeInOnScroll>
-  </div>
 
-  <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
+    <div
+      class="flex w-full h-auto py-16 bg-navy-800 items-center justify-center"
+    >
+      <FadeInOnScroll client:load delay={0.5}>
+        <p
+          class="flex w-full items-start justify-center text-xl text-gold-300 mb-5"
+        >
+          FALTAN
+        </p>
+        <CountDownDate client:load date={fechaBoda} />
+      </FadeInOnScroll>
+    </div>
+
+    <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
       <FadeInOnScroll client:load delay={0.5}>
         <p
           class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
@@ -58,38 +60,38 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         <WeddingCalendar client:load date={fechaBoda} />
       </FadeInOnScroll>
     </div> -->
-  <div class="flex w-full h-auto py-16 items-center justify-center">
-    <FadeInOnScroll client:load delay={0.7}>
-      <p
-        class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
-      >
-        EL GRAN DIA
-      </p>
-      <WeddingMonthCalendar client:load date={fechaBoda} />
-    </FadeInOnScroll>
-  </div>
+    <div class="flex w-full h-auto py-16 items-center justify-center">
+      <FadeInOnScroll client:load delay={0.7}>
+        <p
+          class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
+        >
+          EL GRAN DIA
+        </p>
+        <WeddingMonthCalendar client:load date={fechaBoda} />
+      </FadeInOnScroll>
+    </div>
 
-  <div class="relative w-full h-auto bg-navy-800 py-16">
-    <FadeInOnScroll client:load delay={0.7}>
-      <p
-        class="flex w-full items-start justify-center text-2xl text-gold-300 mb-5"
-      >
-        ITINERARIO
-      </p>
-      <TimeLine
-        client:load
-        events={[
-          { time: "5:00 PM", title: "Ceremonia", icon: "💍" },
-          { time: "8:00 PM", title: "Civil", icon: "💍" },
-          { time: "8:45 PM", title: "Recepción", icon: "🥂" },
-          { time: "9:30 PM", title: "Banquete", icon: "🍽" },
-          { time: "10:00 PM", title: "Baile", icon: "🎶" },
-        ]}
-      />
-    </FadeInOnScroll>
-  </div>
-  <div class="flex w-full h-auto  py-16 items-center justify-center">
-    <p class="text-navy-950">UBICACION IGLESIA</p>
-  </div>
-  <!-- </OpenCard> -->
+    <div class="flex w-full h-auto bg-navy-800 py-16">
+      <FadeInOnScroll client:load delay={0.7}>
+        <p
+          class="flex w-full items-start justify-center text-2xl text-gold-300 mb-5"
+        >
+          ITINERARIO
+        </p>
+        <TimeLine
+          client:load
+          events={[
+            { time: "5:00 PM", title: "Ceremonia", icon: "💍" },
+            { time: "8:00 PM", title: "Civil", icon: "💍" },
+            { time: "8:45 PM", title: "Recepción", icon: "🥂" },
+            { time: "9:30 PM", title: "Banquete", icon: "🍽" },
+            { time: "10:00 PM", title: "Baile", icon: "🎶" },
+          ]}
+        />
+      </FadeInOnScroll>
+    </div>
+    <div class="flex w-full h-auto py-16 items-center justify-center">
+      <p class="text-navy-950">UBICACION IGLESIA</p>
+    </div>
+  </OpenCard>
 </Layout>
