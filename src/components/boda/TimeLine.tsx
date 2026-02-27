@@ -24,8 +24,8 @@ export default function TimeLine({ events }: Props) {
                     return (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{
                                 duration: 1,
                                 delay: index * 0.2,
