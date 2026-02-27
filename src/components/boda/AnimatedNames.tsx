@@ -18,7 +18,7 @@ export default function AnimatedNames() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
-        className="text-ivory-300 text-3xl md:text-7xl my-4"
+        className="text-ivory-100 text-3xl md:text-7xl my-4"
         style={{ transform: "translateZ(0)" }}
       >
         &

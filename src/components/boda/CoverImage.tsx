@@ -14,7 +14,7 @@ export default function CoverImage() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-ivory-50 min-h-[600px]">
+    <section className="relative h-[100svh] w-full overflow-hidden bg-ivory-50 ">
 
       <img
         ref={imgRef}
@@ -22,14 +22,23 @@ export default function CoverImage() {
         alt="Yulissa y Miguel"
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full
-              object-cover
-              object-[15%_30%]
-              scale-125 md:scale-100
-              transition duration-1000 ease-out ${imageLoaded ? "blur-0" : "blur-md"
-          }`}
+                object-cover
+                object-[20%_35%]
+                transition duration-1000 ease-out
+                will-change-transform
+                ${imageLoaded ? "" : "blur-md"}`}
+        style={{
+          transform: "scale(1.08)"
+        }}
       />
 
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/15"></div>
+
+      <div className="absolute inset-0 pointer-events-none
+                  bg-gradient-to-b
+                  from-navy-80/70
+                  via-transparent
+                  to-navy-900/80" />
 
       <div className="relative z-10 flex items-start justify-center pt-8 h-full">
         <div className="text-center">

@@ -12,7 +12,7 @@ export default function OpenCard({ children }: any) {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-ivory-100">
+    <div className="relative min-h-screen flex items-center justify-center ">
 
       {/* <audio ref={audioRef} src="/music.mp3" loop /> */}
 
