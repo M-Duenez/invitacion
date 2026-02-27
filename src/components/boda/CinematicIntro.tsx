@@ -28,7 +28,7 @@ export default function CinematicIntro() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 2 }}
-        className="text-gold-500 text-4xl md:text-5xl tracking-widest"
+        className="text-gold-500 text-center mx-auto text-4xl md:text-5xl tracking-widest"
       >
         Una historia está por comenzar…
       </motion.h1>
