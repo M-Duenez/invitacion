@@ -30,7 +30,7 @@ export default function CinematicIntro() {
         transition={{ duration: 2 }}
         className="text-gold-500 max-w-sm text-center mx-auto text-4xl md:text-5xl tracking-widest"
       >
-        Una historia está por comenzar…
+        Una hermosa historia está por comenzar…
       </motion.h1>
     </motion.div>
   );
