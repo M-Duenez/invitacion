@@ -8,12 +8,14 @@ export default function Seal({ onOpen }: { onOpen: () => void }) {
       onClick={onOpen}
       className="cursor-pointer flex flex-col items-center"
     >
-      
-      <img src="/boda/sello_iniciales.png" className="w-40 h-40" alt="" />
+      <div className="flex flex-col items-center justify-center ">
+        <img src="/boda/sobre-2.png" className="w-full md:w-[720px] h-auto" alt="" />
 
-      <p className="mt-5 text-gold-500 tracking-widest text-md">
-        Toca el sello
-      </p>
+        <p className=" text-gold-500 text-md md:text-lg tracking-[0.3em]">
+          Toca el sello
+        </p>
+
+      </div>
     </motion.div>
   );
 }

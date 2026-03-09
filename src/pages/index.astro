@@ -16,41 +16,42 @@ import WeddingCalendar from "../components/boda/WeddingCalendar";
 import type { date } from "astro:schema";
 import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 import TimeLine from "../components/boda/TimeLine";
+import TimelineCard from "../components/boda/TimelineCards";
 
 const fechaBoda = "2026-10-02T21:00:00-06:00";
 ---
 
 <Layout>
   <OpenCard client:load>
-    <CoverImage client:load />
+  <CoverImage client:load />
 
-    <FadeInOnScroll client:load>
-      <div class="flex flex-col max-w-xs md:max-w-lg mx-auto m-10 gap-y-5">
-        <p class="text-md text-center text-navy-950 leading-relaxed">
-          Dios nos ha concedido el privilegio de conocernos y amarnos, con su
-          bendición y la de nuestros padres queremos unir nuestras vidas para
-          siempre.
-        </p>
-        <p class="titulo text-center text-4xl text-gold-600">
-          ¡Los invitamos a acompanarnos en este día tan especial!
-        </p>
-      </div>
-    </FadeInOnScroll>
-
-    <div
-      class="flex w-full h-auto py-16 bg-navy-800 items-center justify-center"
-    >
-      <FadeInOnScroll client:load delay={0.5}>
-        <p
-          class="flex w-full items-start justify-center text-xl text-gold-300 mb-5"
-        >
-          FALTAN
-        </p>
-        <CountDownDate client:load date={fechaBoda} />
-      </FadeInOnScroll>
+  <FadeInOnScroll type="slide-up" client:load>
+    <div class="flex flex-col max-w-xs md:max-w-xl mx-auto m-10 gap-y-5">
+      <p class="text-md text-justify text-black leading-relaxed">
+        Dios nos ha concedido el privilegio de conocernos y amarnos, con su
+        bendición y la de nuestros padres queremos unir nuestras vidas para
+        siempre.
+      </p>
+      <p class="titulo text-center md:text-justify text-[42px] text-gold-600">
+        ¡Los invitamos a acompañarnos en este día tan especial!
+      </p>
     </div>
+  </FadeInOnScroll>
 
-    <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
+  <div
+    class="flex w-full h-auto py-16 bg-navy-blue items-center justify-center"
+  >
+    <FadeInOnScroll type="rotate" client:load delay={0.5}>
+      <p
+        class="flex w-full items-start justify-center text-xl text-gold-500 mb-5"
+      >
+        FALTAN
+      </p>
+      <CountDownDate client:load date={fechaBoda} />
+    </FadeInOnScroll>
+  </div>
+
+  <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
       <FadeInOnScroll client:load delay={0.5}>
         <p
           class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
@@ -60,18 +61,43 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         <WeddingCalendar client:load date={fechaBoda} />
       </FadeInOnScroll>
     </div> -->
-    <div class="flex w-full h-auto py-16 items-center justify-center">
-      <FadeInOnScroll client:load delay={0.7}>
-        <p
-          class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
-        >
-          EL GRAN DIA
-        </p>
-        <WeddingMonthCalendar client:load date={fechaBoda} />
-      </FadeInOnScroll>
-    </div>
+  <div class="flex w-full h-auto py-16 items-center justify-center">
+    <FadeInOnScroll type="fade" client:load delay={0.7}>
+      <p
+        class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
+      >
+        EL GRAN DIA
+      </p>
+      <WeddingMonthCalendar client:load date={fechaBoda} />
+    </FadeInOnScroll>
+  </div>
 
-    <div class="relative w-full h-auto bg-navy-800 py-16 items-center justify-center overflow-x-hidden">
+  <FadeInOnScroll type="slide-left" client:load delay={0.5}>
+    <div class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-3 gap-y-5">
+      <img src="/boda/img-1.png" alt="" />
+      <p class=" text-gold-500 tracking-[0.5em]">UBICACION IGLESIA</p>
+      <div class="flex w-full h-auto justify-center">
+        <div class="flex w-full mx-5 p-2 bg-white rounded-xl text-navy-blue">
+          <h1>hola mundo</h1>
+        </div>
+      </div>
+    </div>
+  </FadeInOnScroll>
+  <FadeInOnScroll type="slide-right" client:load delay={0.5}>
+    <div class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-3 gap-y-5">
+      <img src="/boda/img-2.png" alt="" />
+      <p class=" text-gold-500 tracking-[0.5em]">UBICACION SALON</p>
+      <div class="flex w-full h-auto justify-center">
+        <div class="flex w-full mx-5 p-2 bg-navy-600/40">
+          <h1>hola mundo</h1>
+        </div>
+      </div>
+    </div>
+  </FadeInOnScroll>
+
+  <!-- <div
+      class="relative w-full h-auto bg-navy-700 py-16 items-center justify-center overflow-x-hidden"
+    >
       <FadeInOnScroll client:load delay={0.7}>
         <p
           class="flex w-full items-start justify-center text-2xl text-gold-300 mb-5"
@@ -89,9 +115,38 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
           ]}
         />
       </FadeInOnScroll>
-    </div>
-    <div class="flex w-full h-auto py-16 items-center justify-center">
-      <p class="text-navy-950">UBICACION IGLESIA</p>
-    </div>
+    </div> -->
+  <!-- <div
+      class="relative w-full h-auto bg-navy-700 py-16 px-4 items-center justify-center overflow-x-hidden"
+    >
+      <FadeInOnScroll client:load delay={0.7}>
+
+        <TimelineCard
+          client:load
+          events={[
+            {
+              time: "6:00 PM",
+              title: "Ceremonia",
+              description: "Intercambio de votos en la capilla.",
+            },
+            {
+              time: "8:00 PM",
+              title: "Recepción",
+              description: "Brindis y bienvenida en el jardín.",
+            },
+            {
+              time: "9:00 PM",
+              title: "Banquete",
+              description: "Cena bajo las estrellas.",
+            },
+            {
+              time: "11:00 PM",
+              title: "Baile",
+              description: "Celebración y música en vivo.",
+            },
+          ]}
+        />
+      </FadeInOnScroll>
+    </div> -->
   </OpenCard>
 </Layout>

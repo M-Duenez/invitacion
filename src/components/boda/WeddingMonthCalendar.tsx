@@ -43,7 +43,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
                  border border-gold-500/40
                  rounded-xl
                  p-6
-                 shadow-navy-800
+                 shadow-navy-blue
                  shadow-[10px_10px_1px_5px_rgba(0,0,0,0.8)]
                  max-w-md mx-auto"
         >
