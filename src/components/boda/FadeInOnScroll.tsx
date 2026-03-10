@@ -29,27 +29,27 @@ export default function FadeInOnScroll({
     },
 
     "slide-up": {
-      initial: { opacity: 0, y: 60 },
+      initial: { opacity: 0, y: 40 },
       animate: { opacity: 1, y: 0 },
     },
 
     "slide-left": {
-      initial: { opacity: 0, x: -60 },
+      initial: { opacity: 0, x: -40 },
       animate: { opacity: 1, x: 0 },
     },
 
     "slide-right": {
-      initial: { opacity: 0, x: 60 },
+      initial: { opacity: 0, x: 40 },
       animate: { opacity: 1, x: 0 },
     },
 
     zoom: {
-      initial: { opacity: 0, scale: 0.85 },
+      initial: { opacity: 0, scale: 0.92 },
       animate: { opacity: 1, scale: 1 },
     },
 
     rotate: {
-      initial: { opacity: 0, rotate: -5, scale: 0.9 },
+      initial: { opacity: 0, rotate: -50, scale: 0.95 },
       animate: { opacity: 1, rotate: 0, scale: 1 },
     },
   };
@@ -61,11 +61,12 @@ export default function FadeInOnScroll({
       initial={selected.initial}
       whileInView={selected.animate}
       transition={{
-        duration,
+        duration: 0.8,
         delay,
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       viewport={{ once: true, amount: 0.3 }}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>

@@ -40,7 +40,7 @@ export default function CoverImage() {
                   via-transparent
                   to-navy-900/80" />
 
-      <div className="relative z-10 flex items-center justify-center mt-64 md:mt-25 h-full">
+      <div className="relative z-10 flex items-center justify-center mt-75 h-full">
         <div className="text-center">
 
           {imageLoaded && (
@@ -49,7 +49,7 @@ export default function CoverImage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5 }}
             >
-              <p className="uppercase tracking-[0.9em] text-ivory-50 text-lg md:text-lg ml-4  mb-4">
+              <p className="uppercase tracking-[0.9em] text-ivory-50 text-lg md:text-lg font-bold ml-4 mb-2">
                 Nos casamos
               </p>
               <AnimatedNames />
@@ -62,7 +62,7 @@ export default function CoverImage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="animate-bounce mt-[50px] text-ivory-50 text-sm tracking-widest"
+              className="animate-bounce mt-[10px] text-ivory-50 text-sm tracking-widest"
             >
               Desliza hacia abajo
             </motion.div>

@@ -8,7 +8,7 @@ export default function AnimatedNames() {
         initial={{ x: -80 }}
         animate={{ x: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="titulo text-5xl md:text-[180px] text-ivory-50  tracking-[0.1em] will-change-transform"
+        className="titulo font-bold text-5xl md:text-[180px] text-ivory-50  tracking-[0.1em] will-change-transform"
         style={{ transform: "translateZ(0)" }}
       >
         Yulissa
@@ -28,7 +28,7 @@ export default function AnimatedNames() {
         initial={{ x: 80 }}
         animate={{ x: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="titulo text-5xl md:text-[180px] text-ivory-50 tracking-[0.1em] will-change-transform"
+        className="titulo font-bold text-5xl md:text-[180px] text-ivory-50 tracking-[0.1em] will-change-transform"
         style={{ transform: "translateZ(0)" }}
       >
         Miguel

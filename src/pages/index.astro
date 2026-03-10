@@ -13,16 +13,16 @@ import CoverImage from "../components/boda/CoverImage";
 import CountDownDate from "../components/boda/CountDownDate";
 import FadeInOnScroll from "../components/boda/FadeInOnScroll";
 import WeddingCalendar from "../components/boda/WeddingCalendar";
-import type { date } from "astro:schema";
 import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 import TimeLine from "../components/boda/TimeLine";
 import TimelineCard from "../components/boda/TimelineCards";
+
 
 const fechaBoda = "2026-10-02T21:00:00-06:00";
 ---
 
 <Layout>
-  <OpenCard client:load>
+  <!-- <OpenCard client:load> -->
   <CoverImage client:load />
 
   <FadeInOnScroll type="slide-up" client:load>
@@ -72,24 +72,34 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
     </FadeInOnScroll>
   </div>
 
-  <FadeInOnScroll type="slide-left" client:load delay={0.5}>
+  <FadeInOnScroll type="slide-left" client:load >
     <div class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-3 gap-y-5">
       <img src="/boda/img-1.png" alt="" />
       <p class=" text-gold-500 tracking-[0.5em]">UBICACION IGLESIA</p>
       <div class="flex w-full h-auto justify-center">
-        <div class="flex w-full mx-5 p-2 bg-white rounded-xl text-navy-blue">
-          <h1>hola mundo</h1>
+        <div class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-md items-center justify-center">
+          <img src="/iglesia-icon.png" class="w-25 h-auto" alt="">
+          <div class="flex flex-col max-w-xs text-center items-center justify-center">
+            <p class="titulo text-[35px] font-bold">Miguel Agustin Pro</p>
+            <p>Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
+          </div>
+          <a href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7" type="button" class="flex w-full md:max-w-xl justify-center rounded py-3 bg-navy-blue text-ivory-50 text-lg">Ver ubicación...</a>
         </div>
       </div>
     </div>
   </FadeInOnScroll>
-  <FadeInOnScroll type="slide-right" client:load delay={0.5}>
+  <FadeInOnScroll type="slide-right" client:load >
     <div class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-3 gap-y-5">
       <img src="/boda/img-2.png" alt="" />
       <p class=" text-gold-500 tracking-[0.5em]">UBICACION SALON</p>
       <div class="flex w-full h-auto justify-center">
-        <div class="flex w-full mx-5 p-2 bg-navy-600/40">
-          <h1>hola mundo</h1>
+        <div class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-navy-600 rounded-md items-center justify-center">
+          <img src="/boda/copas.png" class="w-25 h-auto" alt="">
+          <div class="flex flex-col max-w-xs text-center items-center justify-center">
+            <p class="titulo text-gold-500 text-[35px] font-bold">Miguel Agustin Pro</p>
+            <p class="text-gold-300">Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
+          </div>
+          <a href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7" type="button" class="flex w-full md:max-w-xl justify-center rounded py-3 bg-ivory-50 text-navy-blue text-lg">Ver ubicación...</a>
         </div>
       </div>
     </div>
@@ -148,5 +158,5 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         />
       </FadeInOnScroll>
     </div> -->
-  </OpenCard>
+  <!-- </OpenCard> -->
 </Layout>
