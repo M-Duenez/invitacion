@@ -16,6 +16,7 @@ import WeddingCalendar from "../components/boda/WeddingCalendar";
 import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 import TimeLine from "../components/boda/TimeLine";
 import TimelineCard from "../components/boda/TimelineCards";
+import DressCode from "../components/boda/DressCode";
 
 
 const fechaBoda = "2026-10-02T21:00:00-06:00";
@@ -101,6 +102,12 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         </div>
       </div>
     </div>
+  </FadeInOnScroll>
+
+  <FadeInOnScroll type="slide-up" client:load>
+    
+    <DressCode  client:load/>
+
   </FadeInOnScroll>
 
   <!-- <div
