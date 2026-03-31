@@ -66,7 +66,7 @@ body {
       #000000
     );
   color: var(--color-wedding-ivory);
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 body.intro-active {

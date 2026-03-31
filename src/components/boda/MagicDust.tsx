@@ -7,9 +7,9 @@ export default function MagicDust() {
         <motion.div
           key={i}
           className="absolute w-[3px] h-[3px] bg-gold-500 rounded-full opacity-40"
-          initial={{ y: "100vh", opacity: 0 }}
+          initial={{ y: "100dvh", opacity: 0 }}
           animate={{ 
-            y: "-10vh",
+            y: "-10dvh",
             opacity: [0, 0.6, 0]
           }}
           transition={{

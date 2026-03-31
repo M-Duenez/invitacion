@@ -14,7 +14,7 @@ export default function CoverImage() {
   }, []);
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden bg-ivory-50 ">
+    <section className="relative h-[100dvh] w-full overflow-hidden bg-ivory-50 ">
 
       <img
         ref={imgRef}
@@ -23,7 +23,7 @@ export default function CoverImage() {
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full
                 object-cover
-                object-[40%_35%]
+                object-[25%_35%]
                 transition duration-1000 ease-out
                 will-change-transform
                 ${imageLoaded ? "" : "blur-md"}`}
