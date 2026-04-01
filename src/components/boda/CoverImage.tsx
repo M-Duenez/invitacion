@@ -14,7 +14,7 @@ export default function CoverImage() {
   }, []);
 
   return (
-    <section className="relative h-[100dvh] w-full overflow-hidden bg-ivory-50 ">
+    <section className="relative h-screen w-full bg-ivory-50 touch-pan-y">
 
       <img
         ref={imgRef}
@@ -24,11 +24,10 @@ export default function CoverImage() {
         className={`absolute inset-0 w-full h-full
                 object-cover
                 object-[25%_35%]
-                transition duration-1000 ease-out
-                will-change-transform
-                ${imageLoaded ? "" : "blur-md"}`}
+                
+                pointer-events-none
+                `}
         style={{
-          transform: "scale(1.08)"
         }}
       />
 
@@ -40,7 +39,7 @@ export default function CoverImage() {
                   via-transparent
                   to-navy-900/80" />
 
-      <div className="relative z-10 flex items-center justify-center mt-75 h-full">
+      <div className="relative z-10 flex items-end justify-center  h-full">
         <div className="text-center">
 
           {imageLoaded && (
@@ -62,7 +61,7 @@ export default function CoverImage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="animate-bounce mt-[10px] text-ivory-50 text-sm tracking-widest"
+              className="animate-bounce mt-[10px] mb-5 text-ivory-50 text-sm tracking-widest"
             >
               Desliza hacia abajo
             </motion.div>

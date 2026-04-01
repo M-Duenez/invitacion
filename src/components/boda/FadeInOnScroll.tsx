@@ -65,8 +65,8 @@ export default function FadeInOnScroll({
         delay,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      viewport={{ once: true, amount: 0.3 }}
-      style={{ willChange: "transform, opacity" }}
+      viewport={{ once: true, margin: "-100px" }}
+      style={{ willChange: "transform, opacity", touchAction: "pan-y" }}
     >
       {children}
     </motion.div>

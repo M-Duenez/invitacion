@@ -14,10 +14,10 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-4xl text-navy-blue tracking-[0.3em] mb-16"
+                className="text-2xl md:text-4xl text-navy-blue tracking-[0.2em] mb-2"
             >
                 {title}
-                <img src="/boda/dress_code.png" className="mx-auto w-35 h-auto" alt="" />
+                <img src="/boda/dresscode.png" className="mx-auto w-65 h-auto" alt="" />
             </motion.h2>
 
 
@@ -30,7 +30,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-lg p-8 shadow-md border border-gold-200"
+                    className="bg-white rounded-xl p-8 shadow-md border border-gold-200"
                 >
                     <h3 className="text-gold-500 text-xl mb-4 tracking-widest">
                         MUJERES
@@ -60,7 +60,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-lg p-8 shadow-md border border-gold-200"
+                    className="bg-white rounded-xl p-8 shadow-md border border-gold-200"
                 >
                     <h3 className="text-gold-500 text-xl mb-4 tracking-widest">
                         HOMBRES

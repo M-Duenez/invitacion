@@ -94,3 +94,8 @@ body.intro-active {
   filter: blur(120px);
   animation: aurora 12s ease-in-out infinite;
 }
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+}

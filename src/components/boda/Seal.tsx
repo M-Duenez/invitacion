@@ -14,7 +14,7 @@ export default function Seal({ nombre = 'Fam. Rivera Lopez', pases = 3, onOpen }
       onClick={onOpen}
       className="cursor-pointer flex flex-col items-center"
     >
-      <p className="text-navy-800 text-4xl md:text-6xl tracking-wide mb-6">Bienvenido</p>
+      <p className="text-navy-800 text-4xl md:text-6xl tracking-wide mb-6">Bienvenid@(s)</p>
 
       <div className="relative flex justify-center ">
 

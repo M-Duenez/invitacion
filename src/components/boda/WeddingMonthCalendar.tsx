@@ -51,13 +51,15 @@ export default function WeddingMonthCalendar({ date }: Props) {
                 {monthName} {year}
             </h3>
 
-            <div className="grid grid-cols-7 gap-2 text-center text-sm text-earth-700 mb-3">
+            <hr className="w-full mb-1 text-gold-500"/>
+            <div className="grid grid-cols-7 gap-2 text-center text-sm text-earth-700 mb-1">
                 {["DO", "LU", "MA", "MI", "JU", "VI", "SA"].map((d) => (
                     <div key={d} className="font-semibold text-gold-500">
                         {d}
                     </div>
                 ))}
             </div>
+            <hr className="w-full mb-2 text-gold-500"/>
 
             <div className="grid grid-cols-7 gap-2 text-center text-earth-800">
                 {daysArray.map((d, i) => (
@@ -83,7 +85,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
 
                             </div>
                         ) : (
-                            <span>{d}</span>
+                            <span className="flex mt-1 justify-center">{d}</span>
                         )}
                     </div>
                 ))}

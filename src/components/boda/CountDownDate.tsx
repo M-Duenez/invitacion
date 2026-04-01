@@ -1,3 +1,4 @@
+import { span } from "framer-motion/client";
 import { useEffect, useState } from "react";
 
 interface TimeLeft {
@@ -37,15 +38,23 @@ export default function CountDownElegant({ date }: { date: string }) {
   }, [targetDate]);
 
   return (
-    <div className="flex justify-center gap-7 text-center">
-      {Object.entries(timeLeft).map(([key, value]) => (
-        <div key={key} className="flex flex-col">
-          <span className="text-4xl text-gold-500 font-bold">
-            {value.toString().padStart(2, "0")}
-          </span>
-          <span className="text-gold-400 uppercase text-xs tracking-widest">
-            {key}
-          </span>
+    <div className="flex item-center justify-center text-center">
+      {Object.entries(timeLeft).map(([key, value], index, array) => (
+        <div key={key} className="flex items-center">
+
+          <div className="flex flex-col items-center px-3">
+            <span className="text-3xl text-gold-500 font-bold">
+              {value.toString().padStart(2, "0")}
+            </span>
+            <span className="text-gold-400 uppercase text-xs tracking-widest">
+              {key}
+            </span>
+          </div>
+
+          {index < array.length - 1 &&(
+            <span className="h-13 w-[3px] bg-gold-500 mx-2 opacity-40"></span>
+          )}
+
         </div>
       ))}
     </div>
