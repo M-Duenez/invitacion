@@ -2,7 +2,13 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Seal from "./Seal";
 
-export default function OpenCard({ children }: any) {
+interface Props {
+    nombre?: string;
+    pases?: number;
+    children: React.ReactNode;
+}
+
+export default function OpenCard({ nombre, pases, children }: Props) {
   const [open, setOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -17,7 +23,7 @@ export default function OpenCard({ children }: any) {
       {/* <audio ref={audioRef} src="/music.mp3" loop /> */}
 
       {!open ? (
-        <Seal onOpen={handleOpen} />
+        <Seal nombre={nombre} pases={pases} onOpen={handleOpen} />
       ) : (
         <motion.div
           initial={{ opacity: 0 }}

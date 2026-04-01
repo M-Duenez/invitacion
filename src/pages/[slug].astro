@@ -1,0 +1,163 @@
+---
+import Layout from "../layouts/Layout.astro";
+import invitados from "../data/invitados.json";
+import OpenCard from "../components/boda/OpenCard";
+import CoverImage from "../components/boda/CoverImage";
+import CountDownDate from "../components/boda/CountDownDate";
+import DressCode from "../components/boda/DressCode";
+import FadeInOnScroll from "../components/boda/FadeInOnScroll";
+import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
+
+// 🔥 IMPORTANTE
+export function getStaticPaths() {
+  return invitados.map((inv) => ({
+    params: { slug: inv.slug },
+    props: { invitado: inv },
+  }));
+}
+
+// 🔹 Recibir props
+const { invitado } = Astro.props;
+
+// 🔹 Validación (opcional pero recomendado)
+if (!invitado) {
+  throw new Error("Invitado no encontrado");
+}
+
+const fechaBoda = "2026-10-02T21:00:00-06:00";
+---
+
+<Layout>
+  <OpenCard client:load nombre={invitado.nombre} pases={invitado.pases}>
+    <CoverImage client:load />
+
+    <FadeInOnScroll type="slide-up" client:load>
+      <div class="flex flex-col max-w-xs md:max-w-xl mx-auto m-10 gap-y-5">
+        <p class="text-md text-justify text-black leading-relaxed">
+          Dios nos ha concedido el privilegio de conocernos y amarnos, con su
+          bendición y la de nuestros padres queremos unir nuestras vidas para
+          siempre.
+        </p>
+        <p class="titulo text-center md:text-justify text-[42px] text-gold-600">
+          ¡Los invitamos a acompañarnos en este día tan especial!
+        </p>
+      </div>
+    </FadeInOnScroll>
+
+    <div class="relative w-full">
+
+        {/* Imagen de fondo */}
+        <img 
+        src="/boda/fondo_azul.jpg"
+        class="w-full h-auto object-cover"
+        alt=""
+        />
+
+        {/* Contenido encima */}
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+
+        <FadeInOnScroll type="rotate" client:load delay={0.5}>
+            <p class="font-bold text-xl text-gold-500 mb-5 tracking-[0.5em]">
+            FALTAN
+            </p>
+
+            <CountDownDate client:load date={fechaBoda} />
+        </FadeInOnScroll>
+
+        </div>
+
+    </div>
+
+    <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
+      <FadeInOnScroll client:load delay={0.5}>
+        <p
+          class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
+        >
+          EL GRAN DIA
+        </p>
+        <WeddingCalendar client:load date={fechaBoda} />
+      </FadeInOnScroll>
+    </div> -->
+    <div class="flex w-full h-auto py-16 items-center justify-center">
+      <FadeInOnScroll type="fade" client:load delay={0.7}>
+        <p
+          class="flex w-full items-start justify-center text-2xl text-navy-950 mb-5"
+        >
+          EL GRAN DÍA
+        </p>
+        <WeddingMonthCalendar client:load date={fechaBoda} />
+      </FadeInOnScroll>
+    </div>
+
+    <FadeInOnScroll type="slide-left" client:load>
+      <div
+        class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-8 gap-y-5"
+      >
+        <img src="/boda/img-1.png" alt="" />
+        <p class="text-gold-500 tracking-[0.5em]">UBICACIÓN IGLESIA</p>
+        <div class="flex w-full h-auto justify-center">
+          <div
+            class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-md items-center justify-center"
+          >
+            <img src="/boda/icon_iglesia.png" class="w-25 h-auto" alt="" />
+            <img src="/boda/icono_iglesia.png" class="w-45 h-10" alt="">
+            <div
+              class="flex flex-col max-w-xs text-center items-center justify-center"
+            >
+              <p class="titulo text-[35px] font-bold tracking-[0.1em]">
+                Miguel Agustin Pro
+              </p>
+              <p>Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7"
+              type="button"
+              class="flex w-full md:max-w-xl justify-center rounded-md py-3 bg-navy-blue text-ivory-50 text-lg"
+              >Ver ubicación...</a
+            >
+          </div>
+        </div>
+      </div>
+    </FadeInOnScroll>
+    <FadeInOnScroll type="slide-right" client:load>
+      <div
+        class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-8 gap-y-5"
+      >
+        <img src="/boda/img-2.png" alt="" />
+        <p class="text-gold-500 tracking-[0.5em]">UBICACIÓN SALON</p>
+        <div class="flex w-full h-auto justify-center">
+          <div
+            class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-md items-center justify-center"
+          >
+            <img src="/boda/icon_fiesta.png" class="w-25 h-auto" alt="" />
+            <div
+              class="flex flex-col max-w-xs text-center items-center justify-center"
+            >
+              <p class="titulo text-[38px] font-bold tracking-[0.1em]">
+                Hacienda Elegancia
+              </p>
+              <p>
+                Sierra Madre Occidental 1011, M. Mercado de López Sánchez, 27000
+                Torreón, Coah.
+              </p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/DcsK3XkUb9dK2yyi9"
+              type="button"
+              class="flex w-full md:max-w-xl justify-center rounded-md py-3 bg-navy-blue text-ivory-50 text-lg"
+              >Ver ubicación...</a
+            >
+          </div>
+        </div>
+      </div>
+    </FadeInOnScroll>
+
+    <FadeInOnScroll type="slide-up" client:load>
+      <DressCode client:load />
+    </FadeInOnScroll>
+  </OpenCard>
+  <!-- 🎯 SECCIÓN PERSONALIZADA -->
+
+  <!-- 🔥 AQUÍ VA TODA TU INVITACIÓN -->
+  <!-- Puedes reutilizar tus componentes -->
+</Layout>

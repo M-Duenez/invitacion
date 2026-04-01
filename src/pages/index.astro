@@ -39,15 +39,28 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
     </div>
   </FadeInOnScroll>
 
-  <div
-    class="flex w-full h-auto py-16 bg-navy-blue items-center justify-center"
-  >
-    <FadeInOnScroll type="rotate" client:load delay={0.5}>
-      <p class="flex w-full items-start justify-center font-bold text-xl text-gold-500 mb-5">
-        FALTAN
-      </p>
-      <CountDownDate client:load date={fechaBoda} />
-    </FadeInOnScroll>
+  <div class="relative w-full">
+
+    {/* Imagen de fondo */}
+    <img 
+      src="/boda/fondo_azul.jpg"
+      class="w-full h-auto object-cover"
+      alt=""
+    />
+
+    {/* Contenido encima */}
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+
+      <FadeInOnScroll type="rotate" client:load delay={0.5}>
+        <p class="font-bold text-xl text-gold-500 mb-5 tracking-[0.5em]">
+          FALTAN
+        </p>
+
+        <CountDownDate client:load date={fechaBoda} />
+      </FadeInOnScroll>
+
+    </div>
+
   </div>
 
   <!-- <div class="flex w-full h-auto py-16 bg-white items-center justify-center">
@@ -79,6 +92,8 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         <div class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-md items-center justify-center">
           <img src="/boda/icon_iglesia.png" class="w-25 h-auto" alt="">
           <div class="flex flex-col max-w-xs text-center items-center justify-center">
+            <img src="/boda/icono_iglesia.png" class="w-65 h-auto" alt="">
+
             <p class="titulo text-[35px] font-bold tracking-[0.1em]">Miguel Agustin Pro</p>
             <p>Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
           </div>
