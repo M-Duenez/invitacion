@@ -6,7 +6,7 @@ interface Props {
 
 export default function DressCode({ title = "Código de vestimenta" }: Props) {
     return (
-        <div className="w-full max-w-5xl mx-auto py-12 px-6 text-center">
+        <div className="w-full max-w-5xl mx-auto bg-navy-blue py-12 px-6 text-center">
 
             {/* Título */}
             <motion.h2
@@ -14,7 +14,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-4xl text-navy-blue tracking-[0.2em] mb-2"
+                className="text-2xl md:text-4xl text-gold-500 tracking-[0.2em] mb-2"
             >
                 {title}
                 <img src="/boda/dresscode.png" className="mx-auto w-65 h-auto" alt="" />
@@ -81,7 +81,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                         <div className="w-6 h-6 rounded-full bg-[#284AB9]" /> 
                     </div>
                 </motion.div>
-                <p className="flex md:col-span-2 justify-center items-center mx-auto text-navy-blue text-[16px] leading-relaxed max-w-xl">
+                <p className="flex md:col-span-2 justify-center items-center mx-auto text-gold-500 text-[16px] leading-relaxed max-w-xl">
                     Agradecemos su comprensión y apoyo para respetar el código de vestimenta y así
                     contribuir a la armonía de este día tan especial.
                 </p>
