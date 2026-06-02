@@ -52,7 +52,7 @@ export default function CountDownElegant({ date }: { date: string }) {
           </div>
 
           {index < array.length - 1 &&(
-            <span className="h-13 w-[3px] bg-gold-500 mx-2 opacity-40"></span>
+            <span className="text-5xl text-gold-500 mx-1">:</span>
           )}
 
         </div>

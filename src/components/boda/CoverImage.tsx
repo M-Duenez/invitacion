@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import AnimatedNames from "./AnimatedNames";
 import Rings from "./Rings";
+import { div } from "framer-motion/client";
+import AnimatedText from "./AnimateText";
 
 export default function CoverImage() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -39,35 +41,57 @@ export default function CoverImage() {
                   via-transparent
                   to-navy-900/80" />
 
-      <div className="relative z-10 flex items-end justify-center  h-full">
-        <div className="text-center">
+      <div className="relative z-10 flex flex-col justify-between w-full h-full py-10">
 
+        {/* Parte superior */}
+        <div className="flex justify-center">
           {imageLoaded && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5 }}
-            >
-              <p className="uppercase tracking-[0.9em] text-ivory-50 text-lg md:text-lg font-bold ml-4 mb-2">
-                Nos casamos
-              </p>
-              <AnimatedNames />
-              {/* <Rings /> */}
-            </motion.div>
+            <AnimatedText
+              text="Nos casamos"
+              className="titulo tracking-[0.1em] text-ivory-50 text-6xl font-bold"
+            />
           )}
-
-          {imageLoaded && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              className="animate-bounce mt-[10px] mb-5 text-ivory-50 text-sm tracking-widest"
-            >
-              Desliza hacia abajo
-            </motion.div>
-          )}
-
         </div>
+
+        {/* Parte inferior */}
+        <div className="flex flex-col w-full items-center">
+          {imageLoaded && (
+            <>
+              {/* <AnimatedNames /> */}
+              
+              <motion.img
+                src="/boda/logo_YM_blanco_copia.png"
+                alt=""
+                className="w-50"
+                initial={{
+                  opacity: 0,
+                  y: 100,
+                  scale: 0.8,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  delay: 1.5,
+                  duration: 1.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              />
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.0, duration: 1 }}
+                className="animate-bounce mt-3 text-ivory-50 text-sm tracking-widest"
+              >
+                Desliza hacia abajo
+              </motion.div>
+            </>
+          )}
+        </div>
+
       </div>
 
     </section>

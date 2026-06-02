@@ -36,6 +36,10 @@ const height = 2150;
     
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap">
   </head>
 
   <body class="relative bg-ivory-50 text-earth-800 touch-pan-y overflow-x-hidden">
@@ -47,17 +51,10 @@ const height = 2150;
     <!-- Fondo 3D -->
     <!-- <DeepSpace client:load /> -->
 
-    <div class="relative z-10 flex flex-col min-h-screen w-full bg-ivory-50">
+    <div class="relative z-10 flex flex-col h-screen w-full bg-ivory-50">
       <main class="flex-1 w-full overflow-x-hidden">
         <slot />
       </main>
-
-      <footer
-        class="w-full py-6 text-center text-sm tracking-widest
-         bg-ivory-50 text-navy-blue border-t border-gold-400/40"
-      >
-        Yulissa & Miguel · 2026
-      </footer>
     </div>
   </body>
 </html>

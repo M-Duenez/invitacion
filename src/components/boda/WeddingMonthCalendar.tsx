@@ -13,24 +13,36 @@ export default function WeddingMonthCalendar({ date }: Props) {
 
     const firstDayOfMonth = new Date(year, month, 1);
     const lastDayOfMonth = new Date(year, month + 1, 0);
-
+    
     const startDay = firstDayOfMonth.getDay()// 0 domingo
     const daysInMonth = lastDayOfMonth.getDate();
-
+    
     const monthName = weddingDate.toLocaleString("es-MX", {
         month: "long",
     }).toUpperCase();
-
+    
     const daysArray = [];
-
+    
     // Espacios vacíos antes del día 1
     for (let i = 0; i < startDay; i++) {
         daysArray.push(null);
     }
-
+    
     // Días reales
     for (let i = 1; i <= daysInMonth; i++) {
         daysArray.push(i);
+    }
+    
+    const weekIndex = Math.floor((startDay + day - 1) / 7);
+
+    const weekDays = daysArray.slice(
+        weekIndex * 7,
+        weekIndex * 7 + 7
+    );
+
+    // completar espacios vacíos
+    while (weekDays.length < 7) {
+        weekDays.push(null);
     }
 
     return (
@@ -42,12 +54,12 @@ export default function WeddingMonthCalendar({ date }: Props) {
             className="bg-white backdrop-blur-sm
                  border border-gold-500/40
                  rounded-xl
-                 p-6
+                 p-4
                  shadow-navy-blue
                  shadow-[10px_10px_1px_5px_rgba(0,0,0,0.8)]
                  max-w-md mx-auto"
         >
-            <h3 className="text-center text-gold-600 tracking-[0.3em] mb-6">
+            <h3 className="text-center text-gold-600 tracking-[0.3em] mb-4">
                 {monthName} {year}
             </h3>
 
@@ -62,7 +74,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
             <hr className="w-full mb-2 text-gold-500"/>
 
             <div className="grid grid-cols-7 gap-2 text-center text-earth-800">
-                {daysArray.map((d, i) => (
+                {weekDays.map((d, i) => (
                     <div key={i}>
                         {d === day ? (
                             <div className="relative w-10 h-10 mx-auto flex items-center justify-center">

@@ -14,133 +14,133 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
   <!-- 
     -->
   <OpenCard client:load />
-  <main id="content" class="opacity-0 pointer-events-none">
+  <main  class="">
     <CoverImage client:visible />
 
-    <FadeInOnScroll type="slide-up" client:visible>
+    <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
       <div class="flex flex-col max-w-xs md:max-w-xl mx-auto m-10 gap-y-5">
-        <p class="text-md text-justify text-black leading-relaxed">
+        <!-- <p class="text-md text-justify text-black leading-relaxed">
           Dios nos ha concedido el privilegio de conocernos y amarnos, con su
           bendición y la de nuestros padres queremos unir nuestras vidas para
           siempre.
+        </p> -->
+        <p class="text-md text-center text-black leading-relaxed">
+          El amor nos unió y queremos compartir contigo el inicio de nuestra historia para siempre.
         </p>
         <p
-          class="titulo mx-auto text-center md:text-justify font-bold text-[2.2rem] text-gold-500"
+          class="subtitulo mx-auto text-center md:text-justify  text-3xl text-gold-500"
         >
           ¡Los invitamos a acompañarnos en este día tan especial!
         </p>
       </div>
     </FadeInOnScroll>
 
-    <div
-      class="flex w-full h-auto py-10 items-center justify-center bg-navy-blue"
-    >
+    <div class="flex flex-col w-full h-auto py-7 items-center justify-center bg-navy-blue gap-y-5" >
       <FadeInOnScroll type="fade" client:visible delay={0.7}>
         <p
-          class="flex w-full justify-center titulo font-bold text-[48px] text-gold-500 mb-2 tracking-[0.1em]"
+          class="flex w-full justify-center titulo font-bold text-[48px] text-gold-500 mb-2 "
         >
           Save the Date
         </p>
         <WeddingMonthCalendar client:visible date={fechaBoda} />
       </FadeInOnScroll>
-    </div>
 
-    <FadeInOnScroll type="slide-up" client:visible>
-      <div
-        class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-8 gap-y-5"
-      >
-        <img src="/boda/img-1.png" alt="" />
-        <p class="font-bold text-gold-500 tracking-[0.5em]">
-          UBICACIÓN IGLESIA
-        </p>
-        <div class="flex w-full h-auto justify-center">
-          <div
-            class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-xl items-center justify-center"
-          >
-            <img src="/boda/icon_iglesia.png" class="w-25 h-auto" alt="" />
-            <div
-              class="flex flex-col max-w-xs text-center items-center justify-center"
-            >
-              <img src="/boda/icono_iglesia.png" class="w-65 h-auto" alt="" />
-
-              <p class="titulo text-[35px] font-bold tracking-[0.1em]">
-                Miguel Agustin Pro
-              </p>
-              <p>Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
-            </div>
-            <a
-              href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7"
-              type="button"
-              class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
-              >¿Como llegar?</a
-            >
-          </div>
-        </div>
-      </div>
-    </FadeInOnScroll>
-    <FadeInOnScroll type="slide-up" client:visible>
-      <div
-        class="flex flex-col w-full h-auto bg-navy-blue items-center justify-center pb-8 gap-y-5"
-      >
-        <img src="/boda/img-2.png" alt="" />
-        <p class="font-bold text-gold-500 tracking-[0.5em]">UBICACIÓN SALON</p>
-        <div class="flex w-full h-auto justify-center">
-          <div
-            class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-xl items-center justify-center"
-          >
-            <img src="/boda/icon_fiesta.png" class="w-25 h-auto" alt="" />
-            <div
-              class="flex flex-col max-w-xs text-center items-center justify-center"
-            >
-              <p class="titulo text-[38px] font-bold tracking-[0.1em]">
-                Hacienda Elegancia
-              </p>
-              <p>
-                Sierra Madre Occidental 1011, M. Mercado de López Sánchez, 27000
-                Torreón, Coah.
-              </p>
-            </div>
-            <a
-              href="https://maps.app.goo.gl/DcsK3XkUb9dK2yyi9"
-              type="button"
-              class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
-              >¿Como llegar?</a
-            >
-          </div>
-        </div>
-      </div>
-    </FadeInOnScroll>
-
-    <FadeInOnScroll type="slide-up" client:visible>
-      <DressCode client:visible />
-    </FadeInOnScroll>
-
-    <div class="relative w-full">
-      {/* Imagen de fondo */}
-      <img
-        src="/boda/fondo_azul.jpg"
-        loading="lazy"
-        decoding="async"
-        class="w-full h-auto md:h-80 object-cover"
-        alt=""
-      />
-
-      {/* Contenido encima */}
-      <div
-        class="absolute inset-0 flex flex-col items-center justify-center text-center"
-      >
-        <FadeInOnScroll type="rotate" client:visible delay={0.5}>
-          <p
-            class="mx-auto font-bold text-xl text-gold-500 mb-5 tracking-[0.2em]"
-          >
-            FALTAN
+      <FadeInOnScroll type="slide-up" client:visible>
+        <div class="flex flex-col w-full h-auto items-center justify-center  gap-y-5" >
+          <img src="/boda/img-1.png" alt="" />
+          <p class="font-bold text-gold-500 tracking-[0.5em]">
+            UBICACIÓN IGLESIA
           </p>
+          <div class="flex w-full h-auto justify-center">
+            <div
+              class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-xl items-center justify-center"
+            >
+              <img src="/boda/icon_iglesia.png" class="w-25 h-auto" alt="" />
+              <div
+                class="flex flex-col max-w-xs text-center items-center justify-center"
+              >
+                <img src="/boda/icono_iglesia.png" class="w-65 h-auto" alt="" />
+  
+                <p class="titulo text-[35px] font-bold ">
+                  Miguel Agustin Pro
+                </p>
+                <p>Puerto Escondido, Nueva California, 27085 Torreón, Coah.</p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7"
+                type="button"
+                class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
+                >¿Como llegar?</a
+              >
+            </div>
+          </div>
+        </div>
+      </FadeInOnScroll>
+      <FadeInOnScroll type="slide-up" client:visible>
+        <div class="flex flex-col w-full h-auto  items-center justify-center gap-y-5">
+          <img src="/boda/img-2.png" alt="" />
+          <p class="font-bold text-gold-500 tracking-[0.5em]">UBICACIÓN SALON</p>
+          <div class="flex w-full h-auto justify-center">
+            <div
+              class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-xl items-center justify-center"
+            >
+              <img src="/boda/icon_fiesta.png" class="w-25 h-auto" alt="" />
+              <div
+                class="flex flex-col max-w-xs text-center items-center justify-center"
+              >
+                <p class="titulo text-[38px] font-bold ">
+                  Hacienda Elegancia
+                </p>
+                <p>
+                  Sierra Madre Occidental 1011, M. Mercado de López Sánchez, 27000
+                  Torreón, Coah.
+                </p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/DcsK3XkUb9dK2yyi9"
+                type="button"
+                class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
+                >¿Como llegar?</a
+              >
+            </div>
+          </div>
+        </div>
+      </FadeInOnScroll>
+  
+      <FadeInOnScroll type="slide-up" client:visible>
+        <DressCode client:visible />
+      </FadeInOnScroll>
 
-          <CountDownDate client:visible date={fechaBoda} />
-        </FadeInOnScroll>
+      <div class="relative w-full">
+        {/* Imagen de fondo */}
+        <img
+          src="/boda/fondo_azul.jpg"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-auto md:h-80 object-cover"
+          alt=""
+        />
+
+        {/* Contenido encima */}
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center text-center"
+        >
+          <FadeInOnScroll type="rotate" client:visible delay={0.5}>
+            <p class="mx-auto font-bold text-xl text-gold-500 mb-5 tracking-[0.2em]" >
+              FALTAN
+            </p>
+
+            <CountDownDate client:visible date={fechaBoda} />
+          </FadeInOnScroll>
+        </div>
       </div>
     </div>
   </main>
-  <!-- 
-    -->
+  <footer
+    class="w-full py-6 text-center text-sm tracking-widest
+     bg-ivory-50 text-navy-blue border-t border-gold-400/40"
+  >
+    Yulissa & Miguel · 2026
+  </footer>
+
 </Layout>

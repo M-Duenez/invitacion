@@ -6,7 +6,7 @@ interface Props {
 
 export default function DressCode({ title = "Código de vestimenta" }: Props) {
     return (
-        <div className="w-full max-w-5xl mx-auto bg-navy-blue py-12 px-6 text-center">
+        <div className="w-full max-w-5xl mx-auto bg-navy-blue py-8 px-6 text-center">
 
             {/* Título */}
             <motion.h2

@@ -4,6 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* Nombres */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* Textos generales */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+
 
 @theme {
   /* Navy */
@@ -54,6 +61,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  /* font-family: 'Cormorant Garamond', serif; */
   background: radial-gradient(
       circle at 50% 30%,
       rgba(198, 167, 94, 0.08),
@@ -75,7 +83,12 @@ body.intro-active {
 
 
 .titulo {
-  font-family: 'Tangerine', serif;
+  /* font-family: 'Tangerine', serif; */
+  font-family: 'Parisienne', cursive;
+}
+
+.subtitulo {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 
