@@ -10,7 +10,7 @@ export default function CorazonIntro() {
     const timer = setTimeout(() => {
       setVisible(false);
       document.body.style.overflow = "auto";
-    }, 4000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
