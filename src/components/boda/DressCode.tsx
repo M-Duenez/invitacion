@@ -39,7 +39,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     <p className="text-navy-800 leading-relaxed">
                         Vestido largo en tonos elegantes.
                     </p>
-                    <p className="text-navy-700 mt-2 text-sm">
+                    <p className="mx-auto text-navy-700 mt-2 text-sm max-w-xs md:max-w-xl">
                         Se solicita respetuosamente evitar el uso de vestidos en tonos blancos,
                         marfil o cualquier derivado, ya que estos están reservados exclusivamente
                         para la novia.
@@ -60,17 +60,17 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-xl p-8 shadow-md border border-gold-200"
+                    className="bg-white rounded-xl p-8 shadow-md border border-gold-200 "
                 >
                     <h3 className="text-gold-500 text-xl mb-4 tracking-widest">
                         HOMBRES
                     </h3>
 
-                    <p className="text-navy-800 leading-relaxed">
+                    <p className="text-navy-800 leading-relaxed ">
                         Traje formal en tonos oscuros y elegantes.
                     </p>
 
-                    <p className="text-navy-700 mt-2 text-sm">
+                    <p className="mx-auto text-navy-700 mt-2 text-sm max-w-xs md:max-w-xl">
                         Se solicita evitar el uso de trajes en tonos azul marino y sus variantes,
                         con el fin de mantener la armonía del evento.
                     </p>
@@ -81,7 +81,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                         <div className="w-6 h-6 rounded-full bg-[#284AB9]" /> 
                     </div>
                 </motion.div>
-                <p className="flex md:col-span-2 justify-center items-center mx-auto text-gold-500 text-[16px] leading-relaxed max-w-xl">
+                <p className="flex md:col-span-2 justify-center items-center mx-auto text-gold-500 text-[16px] leading-relaxed max-w-xs md:max-w-xl">
                     Agradecemos su comprensión y apoyo para respetar el código de vestimenta y así
                     contribuir a la armonía de este día tan especial.
                 </p>

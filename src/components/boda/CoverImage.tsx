@@ -63,19 +63,26 @@ export default function CoverImage() {
                 src="/boda/logo_YM_blanco_copia.png"
                 alt=""
                 className="w-50"
-                initial={{
-                  opacity: 0,
-                  y: 100,
-                  scale: 0.8,
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: 100,
+                    scale: 0.8,
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                  },
                 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: false,
+                  amount: 0.5,
                 }}
                 transition={{
-                  delay: 1.5,
-                  duration: 1.2,
+                  duration: 1.9,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               />

@@ -133,7 +133,7 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         <DressCode client:visible />
       </FadeInOnScroll>
 
-      <div class="relative w-full">
+      <!-- <div class="relative w-full">
         {/* Imagen de fondo */}
         <img
           src="/boda/fondo_azul.jpg"
@@ -146,18 +146,62 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         {/* Contenido encima */}
         <div
           class="absolute inset-0 flex flex-col items-center justify-center"
-        >
+        > -->
           <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
-            <p class="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]">¡Prepárate!</p>
+            <div class="flex flex-col">
+              <p class="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]">¡Prepárate!</p>
+              <p class="subtitulo text-end text-2xl text-gold-500 mb-5 mr-7 " >
+                Solo faltan...
+              </p>
 
-            <p class="subtitulo text-end font-bold text-2xl text-gold-500 mb-5 mr-7" >
-              Solo faltan...
-            </p>
+            </div>
+
 
             <CountDownDate client:visible date={fechaBoda} />
           </FadeInOnScroll>
-        </div>
+        <!-- </div> -->
       </div>
+    </div>
+    <div class="flex flex-col w-full items-center justify-center py-5">
+
+      <FadeInOnScroll type="fade" client:visible delay={0.7}>
+  
+        <AnimatedText client:visible
+          text="Asistencia"
+          className="titulo text-center tracking-[0.1em] text-navy-blue text-[52px] font-bold"
+        />
+        <div class="flex justify-center max-w-xs md:max-w-xl">
+          <p class=" text-center text-navy-900 mb-10">
+            Agradecemos confirmar su asistencia antes del 02 de Agosto
+          </p>
+        </div>
+          
+      </FadeInOnScroll>
+      <FadeInOnScroll type="fade" client:visible delay={0.9}>     
+
+        <div class="flex flex-col w-100 px-4 gap-6">
+          <!-- Izquierda -->
+          <div class="flex justify-start">
+            <a
+              href="https://api.whatsapp.com/send?phone=528713458650&text=Buen%20d%C3%ADa,%20Confirmo%20mi%20asistencia."
+              class="rounded-md px-6 py-3 bg-gold-500  text-white text-lg"
+            >
+              Confirmar a la novia
+            </a>
+          </div>
+
+          <!-- Derecha -->
+          <div class="flex justify-end">
+            <a
+              href="https://api.whatsapp.com/send?phone=528713458650&text=Buen%20d%C3%ADa,%20Confirmo%20mi%20asistencia."
+              class="rounded-md px-6 py-3 bg-gold-500  text-white text-lg"
+            >
+              Confirmar al novio
+            </a>
+          </div>
+        </div>
+          
+      </FadeInOnScroll>
     </div>
   </main>
   <footer
