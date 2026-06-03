@@ -38,7 +38,7 @@ export default function CountDownElegant({ date }: { date: string }) {
   }, [targetDate]);
 
   return (
-    <div className="flex item-center justify-center text-center">
+    <div className="flex item-center justify-center text-center mb-5">
       {Object.entries(timeLeft).map(([key, value], index, array) => (
         <div key={key} className="flex items-center">
 

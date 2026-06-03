@@ -51,7 +51,7 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
       </div>
     </FadeInOnScroll>
 
-    <div class="flex flex-col w-full h-auto py-7 items-center justify-center bg-navy-blue gap-y-5" >
+    <div class="relative flex flex-col w-full h-auto py-7 items-center justify-center bg-navy-blue gap-y-5" >
       <FadeInOnScroll type="fade" client:visible delay={0.7}>
         <!-- <p
           class="flex w-full justify-center titulo font-bold text-[48px] text-gold-500 mb-2 "
@@ -133,35 +133,33 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
         <DressCode client:visible />
       </FadeInOnScroll>
 
-      <!-- <div class="relative w-full">
-        {/* Imagen de fondo */}
-        <img
-          src="/boda/fondo_azul.jpg"
-          loading="lazy"
-          decoding="async"
-          class="w-full h-auto md:h-80 object-cover"
-          alt=""
-        />
+      <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
+        <div class="flex flex-col">
+          <AnimatedText client:visible
+            text="¡Prepárate!"
+            className="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]"
+          />
+          <!-- <p class="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]">
+            ¡Prepárate!
+          </p> -->
+          <p class="subtitulo text-end text-2xl text-gold-500 mb-5 mr-7 " >
+            Solo faltan...
+          </p>
 
-        {/* Contenido encima */}
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center"
-        > -->
-          <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
-            <div class="flex flex-col">
-              <p class="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]">¡Prepárate!</p>
-              <p class="subtitulo text-end text-2xl text-gold-500 mb-5 mr-7 " >
-                Solo faltan...
-              </p>
+        </div>
 
-            </div>
+        <CountDownDate client:visible date={fechaBoda} />
+      </FadeInOnScroll>
+      
+      <div class="absolute bottom-0 left-0 bg-black/15"></div>
 
-
-            <CountDownDate client:visible date={fechaBoda} />
-          </FadeInOnScroll>
-        <!-- </div> -->
-      </div>
+      <div class="absolute inset-0 pointer-events-none h-10
+                  bg-gradient-to-b
+                  from-navy-900/80
+                  via-transparent
+                  to-navy-80/70" />
     </div>
+
     <div class="flex flex-col w-full items-center justify-center py-5">
 
       <FadeInOnScroll type="fade" client:visible delay={0.7}>
@@ -194,7 +192,7 @@ const fechaBoda = "2026-10-02T21:00:00-06:00";
           <div class="flex justify-end">
             <a
               href="https://api.whatsapp.com/send?phone=528713458650&text=Buen%20d%C3%ADa,%20Confirmo%20mi%20asistencia."
-              class="rounded-md px-6 py-3 bg-gold-500  text-white text-lg"
+              class="rounded px-6 py-3 bg-gold-500  text-white text-lg"
             >
               Confirmar al novio
             </a>
