@@ -8,6 +8,7 @@ import DressCode from "../components/boda/DressCode";
 import FadeInOnScroll from "../components/boda/FadeInOnScroll";
 import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 import AnimatedText from "../components/boda/AnimateText";
+import GiftTable from "../components/boda/GiftTable";
 
 // 🔥 IMPORTANTE
 export function getStaticPaths() {
@@ -138,6 +139,23 @@ Numero de pases: ${invitado.pases}
   
       <FadeInOnScroll type="slide-up" client:visible>
         <DressCode client:visible />
+      </FadeInOnScroll>
+      
+      <FadeInOnScroll type="slide-up" client:visible>
+        <GiftTable client:visible
+          stores={[
+            {
+              name: "Liverpool",
+              url: "https://mesaderegalos.liverpool.com.mx/",
+              image: "/boda/liverpool.png"
+            },
+            {
+              name: "Amazon",
+              url: "https://www.amazon.com.mx/wedding",
+              image: "/boda/amazon.png"
+            }
+          ]}
+        />
       </FadeInOnScroll>
 
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
