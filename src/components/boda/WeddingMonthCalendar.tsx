@@ -52,7 +52,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
             className="bg-white backdrop-blur-sm
-                 border border-gold-500/40
+                 border border-gold-500/50
                  rounded-xl
                  p-4
                  shadow-navy-blue

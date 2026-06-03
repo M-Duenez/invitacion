@@ -48,7 +48,7 @@ export default function CoverImage() {
           {imageLoaded && (
             <AnimatedText
               text="Nos casamos"
-              className="titulo tracking-[0.1em] text-ivory-50 text-6xl font-bold"
+              className="titulo tracking-[0.1em] text-ivory-50 text-[58px] font-bold"
             />
           )}
         </div>

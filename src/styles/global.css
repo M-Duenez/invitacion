@@ -84,7 +84,12 @@ body.intro-active {
 
 .titulo {
   /* font-family: 'Tangerine', serif; */
-  font-family: 'Parisienne', cursive;
+  /* font-family: 'Parisienne', cursive; */
+  font-family: 'Updock', cursive;
+  /* font-family: 'Neonderthaw', cursive; */
+
+  font-weight: 600;
+  font-style: normal;
 }
 
 .subtitulo {
