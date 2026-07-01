@@ -44,7 +44,7 @@ export default function CoverImage() {
       <div className="relative z-10 flex flex-col justify-between w-full h-full py-10">
 
         {/* Parte superior */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-16">
           {imageLoaded && (
             <AnimatedText
               text="Nos casamos"

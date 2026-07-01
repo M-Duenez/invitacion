@@ -76,10 +76,10 @@ Numero de pases: ${invitado.pases}
       </FadeInOnScroll>
 
       <FadeInOnScroll type="slide-up" client:visible>
-        <div class="flex flex-col w-full h-auto items-center justify-center  gap-y-5" >
+        <div class="flex flex-col w-full h-auto items-center justify-center  gap-y-3 px-3" >
           <img src="/boda/img-1.png" alt="" />
-          <p class="font-bold text-gold-500 tracking-[0.5em]">
-            UBICACIÓN IGLESIA
+          <p class="titulo font-bold text-[40px] tracking-[0.1em] text-gold-500 ">
+            Ceremonia 
           </p>
           <div class="flex w-full h-auto justify-center">
             <div
@@ -90,6 +90,8 @@ Numero de pases: ${invitado.pases}
                 class="flex flex-col max-w-xs text-center items-center justify-center"
               >
                 <img src="/boda/icono_iglesia.png" class="w-65 h-auto" alt="" />
+
+                <p>Capilla:</p>
   
                 <p class="titulo text-[35px] font-bold ">
                   Miguel Agustin Pro
@@ -100,16 +102,16 @@ Numero de pases: ${invitado.pases}
                 href="https://maps.app.goo.gl/2GTDz1yRwTAQdauW7"
                 type="button"
                 class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
-                >¿Como llegar?</a
+                >¿Cómo llegar?</a
               >
             </div>
           </div>
         </div>
       </FadeInOnScroll>
       <FadeInOnScroll type="slide-up" client:visible>
-        <div class="flex flex-col w-full h-auto  items-center justify-center gap-y-5">
+        <div class="flex flex-col w-full h-auto  items-center justify-center gap-y-3 px-3">
           <img src="/boda/img-2.png" alt="" />
-          <p class="font-bold text-gold-500 tracking-[0.5em]">UBICACIÓN SALON</p>
+          <p class="titulo font-bold text-[40px] tracking-[0.1em] text-gold-500">Recepción</p>
           <div class="flex w-full h-auto justify-center">
             <div
               class="flex flex-col w-full mx-5 p-3 gap-y-2 bg-ivory-50 text-navy-blue rounded-xl items-center justify-center"
@@ -130,7 +132,7 @@ Numero de pases: ${invitado.pases}
                 href="https://maps.app.goo.gl/DcsK3XkUb9dK2yyi9"
                 type="button"
                 class="flex w-full md:max-w-xl justify-center rounded-xl py-3 bg-navy-blue text-ivory-50 font-semibold text-lg"
-                >¿Como llegar?</a
+                >¿Cómo llegar?</a
               >
             </div>
           </div>
@@ -138,24 +140,28 @@ Numero de pases: ${invitado.pases}
       </FadeInOnScroll>
   
       <FadeInOnScroll type="slide-up" client:visible>
-        <DressCode client:visible />
+        <div class="flex w-full ">
+          <DressCode client:visible />
+        </div>
       </FadeInOnScroll>
       
       <FadeInOnScroll type="slide-up" client:visible>
-        <GiftTable client:visible
-          stores={[
-            {
-              name: "Liverpool",
-              url: "https://mesaderegalos.liverpool.com.mx/",
-              image: "/boda/liverpool.png"
-            },
-            {
-              name: "Amazon",
-              url: "https://www.amazon.com.mx/wedding",
-              image: "/boda/amazon.png"
-            }
-          ]}
-        />
+        <div class="flex w-full"> 
+          <GiftTable client:visible
+            stores={[
+              {
+                name: "Liverpool",
+                url: "https://mesaderegalos.liverpool.com.mx/",
+                image: "/boda/liverpool.png"
+              },
+              {
+                name: "Amazon",
+                url: "https://www.amazon.com.mx/wedding",
+                image: "/boda/amazon.png"
+              }
+            ]}
+          />
+        </div>
       </FadeInOnScroll>
 
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
@@ -195,7 +201,7 @@ Numero de pases: ${invitado.pases}
         />
         <div class="flex justify-center max-w-xs md:max-w-xl">
           <p class=" text-center text-navy-900 mb-10">
-            Agradecemos <span class="font-bold text-xl">confirmar</span> su asistencia antes del 02 de Agosto
+            Agradecemos <span class="font-bold text-xl">confirmar su asistencia </span>  antes del 02 de Agosto
           </p>
         </div>
           
