@@ -14,15 +14,15 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="p-8 md:p-12 text-center"
+                className="w-full p-8 md:p-12 text-center"
             >
                 {/* Título */}
                 <img src="/boda/dresscode.png" className="mx-auto w-65 h-45" alt="" />
-                <h1 className="titulo font-bold text-[45px] text-gold-500 tracking-[0.1em] mb-5" >
+                <h1 className="titulo font-bold text-[45px] text-gold-500 mb-5" >
                     {title}
                 </h1>
 
-                <div className="flex flex-col w-full bg-ivory-50 rounded-xl p-5 ">
+                <div className="flex flex-col w-106 bg-ivory-50 rounded-xl p-5 ">
 
                     <h3 className="text-gold-500 text-2xl font-bold mb-4 tracking-widest">
                         Elegante

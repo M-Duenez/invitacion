@@ -19,8 +19,8 @@ export default function Seal({ nombre = 'Fam. Rivera Lopez', pases = 3, onOpen }
       <div className="relative flex justify-center ">
 
         <img src="/boda/sobre-2.png" className="w-full  md:max-w-[720px] h-auto" alt="" />
-        <div className="absolute inset-0 flex flex-col w-full items-center justify-end mb-12 md:mb-13 pointer-events-none">
-          <h1 className="text-5xl md:text-6xl text-gold-500 titulo">
+        <div className="absolute inset-0 flex flex-col w-full items-center justify-end mb-8 md:mb-13 pointer-events-none">
+          <h1 className="text-[53px] md:text-6xl text-gold-500 titulo">
             {nombre}
           </h1>
 

@@ -1,4 +1,7 @@
 [
   { "slug": "antonio-&-zaira", "nombre": "Fam. Luna Sifuentes", "pases": 2 },
-  { "slug": "paulina-&-diego", "nombre": "Paulina & Diego", "pases": 2 }
+  { "slug": "paulina-&-diego", "nombre": "Paulina & Diego", "pases": 2 },
+  { "slug": "gloria-&-joseluis", "nombre": "Gloria & Luis", "pases": 2 },
+  { "slug": "ricardo", "nombre": "Ricardo", "pases": 2 },
+  { "slug": "teresa", "nombre": "Fam. Dueñez Palomo", "pases": 4 }
 ]

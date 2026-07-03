@@ -29,18 +29,18 @@ export default function GiftTable({ stores }: Props) {
         />
 
         {/* Título */}
-        <h2 className="titulo text-[58px] text-gold-500 mb-4">
+        <h2 className="titulo font-bold text-[58px] text-gold-500 mb-4">
           Mesa de Regalos
         </h2>
 
         {/* Mensaje */}
         <div className="flex flex-col w-full bg-ivory-50 rounded-xl p-5 ">
 
-          <p className="text-navy-blue text-center w-full mb-5">
+          <p className=" text-navy-blue text-center w-full mb-5">
             Su presencia en nuestra boda será el mejor regalo. Pero si desean darnos otro obsequio, pueden hacerlo en efectivo el dia de la boda en el buzon de sobres que estara en recepción o vía depósito bancario a la siguiente cuenta:.
           </p>
-          <p className="text-navy-blue text-center w-full mb-5">
-            ###############
+          <p className="text-navy-blue text-justify w-full mb-5">
+            Cuenta bancaria: ###############
           </p>
           <p className="text-navy-blue text-lg text-center w-full mb-5">
             ¡Muchas gracias!
