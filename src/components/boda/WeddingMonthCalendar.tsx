@@ -37,7 +37,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
 
     const weekDays = daysArray.slice(
         weekIndex * 7,
-        weekIndex * 7 + 7
+        weekIndex * 7 + 14
     );
 
     // completar espacios vacíos

@@ -89,11 +89,11 @@ body.intro-active {
   /* font-family: 'Parisienne', cursive; */
   /*font-family: 'Updock', cursive; 
   font-family: "Great Vibes", cursive;
-  font-family: "Send Flowers", cursive;*/
-  font-family: "Updock", cursive;
-  /* font-family: 'Neonderthaw', cursive; */
+  font-family: "Send Flowers", cursive;
+  font-family: "Updock", cursive;*/
+  font-family: 'Dynalight', cursive; 
 
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 

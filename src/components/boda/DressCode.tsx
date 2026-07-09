@@ -35,15 +35,15 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                         Ellos: Traje y corbata.
                     </p>
                     <p className="mt-4 text-red-600 text-md leading-relaxed">
-                        Evitar los siguientes colores.
+                        Evitar los siguientes colores en damas y caballeros.
                     </p>
 
                     {/* Colores  */}
                     <div className="flex justify-center gap-3 mt-2">
                         <div className="w-6 h-6 border-black/50 border rounded-full bg-[#fff]" />
                         <div className="w-6 h-6 border-black/50 border rounded-full bg-[#FFF1D6]" />
-                        <div className="w-6 h-6 border-black/50 border rounded-full bg-[#EAE6DD]" />
-                        <div className="w-6 h-6 border-black/50 border rounded-full bg-red-500" />
+                        <div className="w-6 h-6 border-black/50 border rounded-full bg-navy-blue" />
+                        <div className="w-6 h-6 border-black/50 border rounded-full bg-black" />
                     </div>
                 </div>
             </motion.div>
