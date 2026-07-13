@@ -6,52 +6,67 @@ import { div } from "framer-motion/client";
 import AnimatedText from "./AnimateText";
 
 export default function CoverImage() {
-  const [videoReady, setVideoReady] = useState(false);
-  const [videoFinished, setVideoFinished] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(true); 
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
+    if (imgRef.current?.complete) { setImageLoaded(true); }
   }, []);
 
   return (
     <section className="relative h-screen w-full bg-ivory-50 touch-pan-y">
 
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        preload=""
-        onCanPlay={() => setVideoReady(true)}
-        onEnded={() => setVideoFinished(true)}
-        className={`absolute inset-0 w-full h-full object-cover `}
-      >
-        <source src="/boda/yulissa_miguel_1.mp4" type="video/mp4" />
-      </video>
+      <img
+  ref={imgRef}
+  src="/boda/imagen_fondo_1.png"
+  alt="Yulissa y Miguel"
+  onLoad={() => setImageLoaded(true)}
+  className={`absolute inset-0 w-full h-full
+    object-cover
+    transition duration-700 ease-out
+    pointer-events-none
+    ${imageLoaded ? "" : "blur-md"}`}
+  
+/>
 
       
 
       <div className="relative z-10 flex flex-col justify-between w-full h-full py-10">
 
         {/* Parte superior */}
-        <div className="flex justify-center ">
-          {videoFinished && (
-            <AnimatedText
-              text="Nos casamos"
-              className="subtitulo  text-ivory-50 text-[53px] font-bold"
-            />
+        <div className="flex flex-col items-center justify-center ">
+          {imageLoaded && (
+            <>
+            
+              <AnimatedText
+                text="Nos casamos"
+                className="subtitulo  text-ivory-50 text-[53px] font-bold"
+              />
+              <div className="flex flex-col mt-10 items-center">
+                <AnimatedText
+                  text="Yulissa" 
+                  className="titulo  text-ivory-50 text-[95px] font-bold"
+                />
+                <AnimatedText
+                  text="&" 
+                  className="titulo  text-ivory-50 text-[75px] font-bold -mt-5"
+                />
+                <AnimatedText
+                  text="Miguel" 
+                  className="titulo  text-ivory-50 text-[95px] font-bold -mt-4"
+                />
+                
+
+              </div>
+            </>
           )}
         </div>
 
+
         {/* Parte inferior */}
         <div className="flex flex-col w-full items-center">
-          {videoFinished && (
+          {imageLoaded && (
             <>
-              {/* <AnimatedNames /> */}
-              
               <motion.img
                 src="/boda/logo_YM_blanco_copia.png"
                 alt=""

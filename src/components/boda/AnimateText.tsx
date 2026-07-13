@@ -20,11 +20,12 @@ export default function AnimatedText({ text, className }: Props) {
           },
         },
       }}
-      className={className}
+      className={`${className} `}
     >
       {letters.map((letter, index) => (
         <motion.span
           key={index}
+          className="inline-block"
           variants={{
             hidden: {
               opacity: 0,
