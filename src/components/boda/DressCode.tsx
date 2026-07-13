@@ -43,7 +43,6 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                         <div className="w-6 h-6 border-black/50 border rounded-full bg-[#fff]" />
                         <div className="w-6 h-6 border-black/50 border rounded-full bg-[#FFF1D6]" />
                         <div className="w-6 h-6 border-black/50 border rounded-full bg-navy-blue" />
-                        <div className="w-6 h-6 border-black/50 border rounded-full bg-black" />
                     </div>
                 </div>
             </motion.div>
