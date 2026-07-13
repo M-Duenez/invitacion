@@ -7,48 +7,42 @@ import AnimatedText from "./AnimateText";
 
 export default function CoverImage() {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (imgRef.current?.complete) {
-      setImageLoaded(true);
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
     }
   }, []);
 
   return (
     <section className="relative h-screen w-full bg-ivory-50 touch-pan-y">
 
-      <img
-        ref={imgRef}
-        src="/boda/7.jpg"
-        alt="Yulissa y Miguel"
-        onLoad={() => setImageLoaded(true)}
-        className={`absolute inset-0 w-full h-full
-                object-cover
-                object-[25%_35%]
-                
-                pointer-events-none
-                `}
-        style={{
-        }}
-      />
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        onCanPlay={() => setImageLoaded(true)}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <source src="/boda/yulissa_miguel_1.mp4" type="video/mp4" />
+      </video>
 
-      <div className="absolute inset-0 bg-black/15"></div>
-
-      <div className="absolute inset-0 pointer-events-none
-                  bg-gradient-to-b
-                  from-navy-80/70
-                  via-transparent
-                  to-navy-900/80" />
+      
 
       <div className="relative z-10 flex flex-col justify-between w-full h-full py-10">
 
         {/* Parte superior */}
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center ">
           {imageLoaded && (
             <AnimatedText
               text="Nos casamos"
-              className="titulo  text-ivory-50 text-[73px] font-bold"
+              className="subtitulo  text-ivory-50 text-[53px] font-bold"
             />
           )}
         </div>
@@ -62,7 +56,7 @@ export default function CoverImage() {
               <motion.img
                 src="/boda/logo_YM_blanco_copia.png"
                 alt=""
-                className="w-50"
+                className="w-30"
                 variants={{
                   hidden: {
                     opacity: 0,

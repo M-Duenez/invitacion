@@ -34,7 +34,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     <p className="text-navy-800 text-sm leading-relaxed">
                         Ellos: Traje y corbata.
                     </p>
-                    <p className="mt-4 text-red-600 text-md leading-relaxed">
+                    <p className="mt-4 text-black text-md leading-relaxed">
                         Evitar los siguientes colores en damas y caballeros.
                     </p>
 
