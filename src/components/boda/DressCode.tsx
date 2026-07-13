@@ -22,7 +22,7 @@ export default function DressCode({ title = "Código de vestimenta" }: Props) {
                     {title}
                 </h1>
 
-                <div className="flex flex-col w-106 bg-ivory-50 rounded-xl p-5 ">
+                <div className="flex flex-col w-95 md:full bg-ivory-50 rounded-xl p-5 ">
 
                     <h3 className="text-gold-500 text-2xl font-bold mb-4 tracking-widest">
                         Elegante

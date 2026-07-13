@@ -17,17 +17,16 @@ export default function CoverImage() {
     <section className="relative h-screen w-full bg-ivory-50 touch-pan-y">
 
       <img
-  ref={imgRef}
-  src="/boda/imagen_fondo_1.png"
-  alt="Yulissa y Miguel"
-  onLoad={() => setImageLoaded(true)}
-  className={`absolute inset-0 w-full h-full
-    object-cover
-    transition duration-700 ease-out
-    pointer-events-none
-    ${imageLoaded ? "" : "blur-md"}`}
-  
-/>
+      ref={imgRef}
+      src="/boda/imagen_fondo_1.png"
+      alt="Yulissa y Miguel"
+      onLoad={() => setImageLoaded(true)}
+      className={`absolute inset-0 w-full h-full
+        transition duration-700 ease-out
+        pointer-events-none
+        ${imageLoaded ? "" : "blur-md"}`}
+      
+    />
 
       
 
