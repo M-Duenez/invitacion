@@ -30,7 +30,7 @@ export default function GiftTable({ stores }: Props) {
 
         {/* Título */}
         <h2 className="titulo font-bold text-[58px] text-gold-500 mb-4">
-          Mesa de Regalos
+          Regalos
         </h2>
 
         {/* Mensaje */}

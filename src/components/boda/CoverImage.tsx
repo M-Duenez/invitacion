@@ -6,7 +6,8 @@ import { div } from "framer-motion/client";
 import AnimatedText from "./AnimateText";
 
 export default function CoverImage() {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+  const [videoFinished, setVideoFinished] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -22,13 +23,11 @@ export default function CoverImage() {
         ref={videoRef}
         autoPlay
         muted
-        loop
         playsInline
-        preload="metadata"
-        onCanPlay={() => setImageLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-          imageLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        preload=""
+        onCanPlay={() => setVideoReady(true)}
+        onEnded={() => setVideoFinished(true)}
+        className={`absolute inset-0 w-full h-full object-cover `}
       >
         <source src="/boda/yulissa_miguel_1.mp4" type="video/mp4" />
       </video>
@@ -39,7 +38,7 @@ export default function CoverImage() {
 
         {/* Parte superior */}
         <div className="flex justify-center ">
-          {imageLoaded && (
+          {videoFinished && (
             <AnimatedText
               text="Nos casamos"
               className="subtitulo  text-ivory-50 text-[53px] font-bold"
@@ -49,7 +48,7 @@ export default function CoverImage() {
 
         {/* Parte inferior */}
         <div className="flex flex-col w-full items-center">
-          {imageLoaded && (
+          {videoFinished && (
             <>
               {/* <AnimatedNames /> */}
               
