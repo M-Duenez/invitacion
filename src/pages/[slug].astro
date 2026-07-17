@@ -43,15 +43,15 @@ Numero de pases: ${invitado.pases}
     <CoverImage client:visible />
 
     <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
-      <div class="relative max-w-full h-78 bg-cover bg-center" style="background-image: url(boda/marco_azul_1.png);">
+      <div class="relative max-w-full h-78 bg-cover bg-center" style="background-image: url(boda/fondo.png);">
         <div class="flex max-w-xs md:max-w-xl h-full mx-auto items-center" >
           <!-- <p class="text-md text-justify text-black leading-relaxed">
             Dios nos ha concedido el privilegio de conocernos y amarnos, con su
             bendición y la de nuestros padres queremos unir nuestras vidas para
             siempre.
           </p> -->
-          <p class="subtitulo text-md text-justify text-black leading-relaxed">
-            El amor nos encontró, unió nuestros caminos y nos regaló la certeza de querer compartir la vida juntos. Hoy, con el corazón lleno de ilusión, deseamos que formes parte de uno de los momentos más importantes de nuestra historia: <span class="text-gold-500">el comienzo de nuestro para siempre </span>. 
+          <p class="subtitulo text-lg text-justify text-black leading-relaxed">
+            El amor nos encontró, unió nuestros caminos y nos regaló la certeza de querer compartir la vida juntos. Hoy, con el corazón lleno de ilusión, deseamos que formes parte de uno de los momentos más importantes de nuestra historia: <span class="text-gold-600">el comienzo de nuestro para siempre </span>. 
           </p>
           <!-- <p
             class="subtitulo mx-auto text-center md:text-justify  text-3xl text-gold-500"
@@ -144,13 +144,11 @@ Numero de pases: ${invitado.pases}
       </FadeInOnScroll>
   
       <FadeInOnScroll type="slide-up" client:visible>
-        <div class="flex rounded-md w-100 h-100" style="background-image: url(boda/dress_code.png);  ">
-          
-        </div>
+        <div class="flex rounded-xl w-100 h-95" style="background-image: url(boda/dress_code.png);"></div>
       </FadeInOnScroll>
       
       <FadeInOnScroll type="slide-up" client:visible>
-        <div class="flex w-full"> 
+        <div class="flex w-full "> 
           <GiftTable client:visible
             stores={[
               {
@@ -169,7 +167,7 @@ Numero de pases: ${invitado.pases}
       </FadeInOnScroll>
 
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
-        <div class="flex flex-col">
+        <div class="flex flex-col ">
           <AnimatedText client:visible
             text="¡Prepárate!"
             className="titulo text-center font-bold text-[58px] text-gold-500 "
@@ -195,24 +193,28 @@ Numero de pases: ${invitado.pases}
                   to-navy-80/70" />
     </div>
 
-    <div class="flex flex-col w-full items-center justify-center py-5">
+    
+    <div class="relative flex-col w-full bg-cover bg-center py-2" style="background-image: url(boda/fondo.png);">
 
       <FadeInOnScroll type="fade" client:visible delay={0.7}>
-  
-        <AnimatedText client:visible
-          text="Asistencia"
-          className="titulo text-center  text-navy-blue text-[58px] font-bold"
-        />
-        <div class="flex justify-center max-w-xs md:max-w-xl">
-          <p class=" text-center text-navy-900 mb-10">
-            Agradecemos <span class="font-bold text-xl">confirmar su asistencia </span>  antes del 02 de Agosto
-          </p>
+        <div class="flex flex-col w-full items-center justify-center ">
+
+          <AnimatedText client:visible
+            text="Asistencia"
+            className="titulo text-center  text-navy-blue text-[58px] font-bold"
+          />
+          <div class="flex items-center justify-center max-w-xs md:max-w-xl">
+            <p class=" text-center text-navy-900 mb-10">
+              Agradecemos <span class="font-bold text-xl">confirmar su asistencia </span>  antes del 02 de Agosto
+            </p>
+          </div>
         </div>
+  
           
       </FadeInOnScroll>
       <FadeInOnScroll type="fade" client:visible delay={0.9}>     
 
-        <div class="flex flex-col w-100 px-4 gap-6">
+        <div class="flex flex-col w-full px-4 gap-6">
           <!-- Izquierda -->
           <div class="flex justify-start">
             <a

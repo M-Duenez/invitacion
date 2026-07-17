@@ -2,7 +2,7 @@ import { span } from "framer-motion/client";
 import { useEffect, useState } from "react";
 
 interface TimeLeft {
-  dias: number;
+  días: number;
   horas: number;
   minutos: number;
   segundos: number;
@@ -16,11 +16,11 @@ export default function CountDownElegant({ date }: { date: string }) {
     const difference = targetDate - now;
 
     if (difference <= 0) {
-      return { dias: 0, horas: 0, minutos: 0, segundos: 0 };
+      return { días: 0, horas: 0, minutos: 0, segundos: 0 };
     }
 
     return {
-      dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      días: Math.floor(difference / (1000 * 60 * 60 * 24)),
       horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
       minutos: Math.floor((difference / (1000 * 60)) % 60),
       segundos: Math.floor((difference / 1000) % 60),

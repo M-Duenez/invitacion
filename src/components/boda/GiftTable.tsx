@@ -19,17 +19,17 @@ export default function GiftTable({ stores }: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="p-8 md:p-12 text-center"
+        className="px-5 py-2 md:p-12 text-center"
       >
         {/* Ícono */}
         <img
           src="/boda/gift.png"
           alt="Mesa de regalos"
-          className="w-24 h-auto mx-auto mb-6"
+          className="w-24 h-auto mx-auto mb-1"
         />
 
         {/* Título */}
-        <h2 className="titulo font-bold text-[58px] text-gold-500 mb-4">
+        <h2 className="titulo font-bold text-[58px] text-gold-500 mb-2">
           Regalos
         </h2>
 
