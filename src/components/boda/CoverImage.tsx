@@ -22,37 +22,35 @@ export default function CoverImage() {
       alt="Yulissa y Miguel"
       onLoad={() => setImageLoaded(true)}
       className={`absolute inset-0 w-full h-full
+        
         transition duration-700 ease-out
         pointer-events-none
-        ${imageLoaded ? "" : "blur-md"}`}
+        ${imageLoaded ? "" : ""}`}
       
     />
 
       
 
-      <div className="relative z-10 flex flex-col justify-between w-full h-full py-10">
+      <div className="relative z-10 flex flex-col justify-between w-full h-full ">
 
         {/* Parte superior */}
         <div className="flex flex-col items-center justify-center ">
           {imageLoaded && (
             <>
             
-              <AnimatedText
-                text="Nos casamos"
-                className="subtitulo  text-ivory-50 text-[53px] font-bold"
-              />
-              <div className="flex flex-col mt-10 items-center">
+              <p className="subtitulo text-center text-ivory-50 text-[53px] ">Nos casamos</p>
+              <div className="flex mt-5 md:mt-2 items-center gap-x-3">
                 <AnimatedText
                   text="Yulissa" 
-                  className="titulo  text-ivory-50 text-[95px] font-bold"
+                  className="titulo  text-ivory-50 text-[75px] font-bold"
                 />
                 <AnimatedText
                   text="&" 
-                  className="titulo  text-ivory-50 text-[75px] font-bold -mt-5"
+                  className="titulo  text-ivory-50 text-[45px] font-bold "
                 />
                 <AnimatedText
                   text="Miguel" 
-                  className="titulo  text-ivory-50 text-[95px] font-bold -mt-4"
+                  className="titulo  text-ivory-50 text-[75px] font-bold "
                 />
                 
 
@@ -66,7 +64,7 @@ export default function CoverImage() {
         <div className="flex flex-col w-full items-center">
           {imageLoaded && (
             <>
-              <motion.img
+              {/* <motion.img
                 src="/boda/logo_YM_blanco_copia.png"
                 alt=""
                 className="w-30"
@@ -92,15 +90,15 @@ export default function CoverImage() {
                   duration: 1.9,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-              />
+              /> */}
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.0, duration: 1 }}
-                className="animate-bounce mt-3 text-ivory-50 text-sm tracking-widest"
+                className="flex animate-bounce mt-3 text-ivory-50 text-sm tracking-widest gap-x-2"
               >
-                Desliza hacia abajo
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg> <p className="flex items-end">Desliza</p> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
               </motion.div>
             </>
           )}

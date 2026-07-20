@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import AnimatedText from "./AnimateText";
 
 interface GiftStore {
   name: string;
@@ -29,9 +30,13 @@ export default function GiftTable({ stores }: Props) {
         />
 
         {/* Título */}
-        <h2 className="titulo font-bold text-[58px] text-gold-500 mb-2">
+        {/* <h2 className="titulo font-bold text-[58px] text-gold-500 mb-2">
           Regalos
-        </h2>
+        </h2> */}
+        <AnimatedText 
+            text="Regalos"
+            className="titulo text-center font-bold text-[58px] text-gold-500 mb-2"
+          />
 
         {/* Mensaje */}
         <div className="flex flex-col w-full bg-ivory-50 rounded-xl p-5 ">
