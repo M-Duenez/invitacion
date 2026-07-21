@@ -58,6 +58,7 @@ export default function FadeInOnScroll({
 
   return (
     <motion.div
+    className="w-[93%]"
       initial={selected.initial}
       whileInView={selected.animate}
       transition={{

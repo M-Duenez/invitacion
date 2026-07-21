@@ -37,7 +37,7 @@ export default function AnimatedText({ text, className }: Props) {
             },
           }}
           transition={{
-            duration: 0.9,
+            duration: 0.2,
           }}
         >
           {letter === " " ? "\u00A0" : letter}

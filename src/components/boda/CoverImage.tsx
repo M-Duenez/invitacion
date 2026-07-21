@@ -14,15 +14,17 @@ export default function CoverImage() {
   }, []);
 
   return (
-    <section className="relative h-189 md:h-200 w-full bg-ivory-50 touch-pan-y">
+    <section className="relative  touch-pan-y">
 
       <img
       ref={imgRef}
-      src="/boda/imagen_fondo_2.png"
+      src="/boda/imagen_fondo_1.webp"
       alt="Yulissa y Miguel"
       onLoad={() => setImageLoaded(true)}
-      className={`absolute inset-0 
-        
+      className={` 
+        w-full
+        h-auto
+        block
         transition duration-700 ease-out
         pointer-events-none
         ${imageLoaded ? "" : "blur-xl"}`}
@@ -31,7 +33,7 @@ export default function CoverImage() {
 
       
 
-      <div className="relative z-10 flex flex-col justify-between w-full h-full ">
+      <div className="absolute inset-0 flex flex-col justify-between">
 
         {/* Parte superior */}
         <div className="flex flex-col items-center justify-center ">
@@ -44,7 +46,7 @@ export default function CoverImage() {
 
 
         {/* Parte inferior */}
-        <div className="flex flex-col w-full items-center mb-1 ">
+        <div className="flex flex-col w-full items-center">
           {imageLoaded && (
             <>
               {/* <motion.img
@@ -95,7 +97,7 @@ export default function CoverImage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.0, duration: 1 }}
-                className="flex animate-bounce text-ivory-50 text-sm tracking-widest gap-x-2"
+                className="flex animate-bounce text-ivory-50 text-sm tracking-widest gap-x-2 mb-5"
               >
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg> <p className="flex items-end">Desliza</p> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-down-icon lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
               </motion.div>
