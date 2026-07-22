@@ -20,7 +20,6 @@
   --color-navy-950: #232F3E;
   --color-navy-900: #2C3E50;
   --color-navy-800: #34495E;
-
   --color-navy-700: #1C3A6A;
   --color-navy-600: #204C77;
   --color-navy-500: #202643;
@@ -121,4 +120,16 @@ body.intro-active {
 .no-scroll {
   position: fixed;
   width: 100%;
+}
+
+.degradado-azul-ivory {
+  background: radial-gradient(
+    180deg,
+    #202643 0%,
+    #2D3556 20%,
+    #495372 45%,
+    #7A8298 70%,
+    #BFC0C4 88%,
+    #F8F6F1 100%
+  );
 }

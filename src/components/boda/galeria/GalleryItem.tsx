@@ -40,7 +40,7 @@ export default function GalleryItem({
         rounded-[10px]
         cursor-pointer
         border
-        border-gold-600/40
+        border-gold-600
         shadow-lg
       `}
     >

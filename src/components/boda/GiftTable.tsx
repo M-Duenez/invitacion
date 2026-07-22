@@ -35,19 +35,19 @@ export default function GiftTable({ stores }: Props) {
         </h2> */}
         <AnimatedText 
             text="Regalos"
-            className="titulo text-center font-bold text-[58px] text-gold-500 mb-2"
+            className="titulo text-center font-bold text-[58px] text-navy-blue mb-2"
           />
 
         {/* Mensaje */}
-        <div className="flex flex-col w-full bg-ivory-50 rounded-xl p-5 ">
+        <div className="flex flex-col w-full p-5 bg-white/70 rounded-xl border border-gold-500 shadow-2xl">
 
-          <p className=" subtitulo text-navy-blue text-justify leading-relaxed w-full mb-5">
+          <p className=" subtitulo text-navy-700 text-justify leading-relaxed w-full mb-5">
             Su presencia en nuestra boda será el mejor regalo. Pero si desean darnos otro obsequio, pueden hacerlo en efectivo el dia de la boda en el buzon de sobres que estara en recepción o vía depósito bancario a la siguiente cuenta:.
           </p>
-          <p className="subtitulo text-navy-blue text-justify w-full mb-5">
+          <p className="subtitulo text-navy-700 text-justify w-full mb-5">
             Cuenta bancaria: ###############
           </p>
-          <p className="subtitulo text-navy-blue text-lg text-center w-full ">
+          <p className="subtitulo text-navy-700 text-lg text-center w-full ">
             ¡Muchas gracias!
           </p>
         </div>

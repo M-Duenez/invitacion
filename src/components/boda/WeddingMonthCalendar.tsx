@@ -51,7 +51,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className="bg-white backdrop-blur-sm
+            className="bg-white/70 backdrop-blur-sm
                  border border-gold-500/50
                  rounded-xl
                  p-4
@@ -59,7 +59,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
                  shadow-[10px_10px_1px_5px_rgba(0,0,0,0.8)]
                  max-w-md mx-auto"
         >
-            <h3 className="text-center text-gold-600 tracking-[0.3em] mb-4">
+            <h3 className="font-bold text-center text-gold-500 tracking-[0.3em] mb-4">
                 {monthName} {year}
             </h3>
 
@@ -97,7 +97,7 @@ export default function WeddingMonthCalendar({ date }: Props) {
 
                             </div>
                         ) : (
-                            <span className="flex mt-1 justify-center">{d}</span>
+                            <span className="flex mt-1 justify-center text-navy-800">{d}</span>
                         )}
                     </div>
                 ))}

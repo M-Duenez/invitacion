@@ -11,10 +11,10 @@ export default function Gallery() {
         <div className="text-center mb-8">
           <AnimatedText
             text="Nuestra Historia"
-            className="titulo text-[60px] text-gold-500"
+            className="titulo text-[60px] text-navy-blue"
           />
 
-          <p className="subtitulo mt-3 text-lg text-ivory-50 max-w-2xl mx-auto leading-8">
+          <p className="subtitulo mt-3 text-lg text-navy-700 max-w-2xl mx-auto leading-8">
             Cada fotografía representa un instante que nos acercó un poco más al
             día en que decidimos caminar juntos para siempre.
           </p>
@@ -27,7 +27,7 @@ export default function Gallery() {
             grid-cols-2
             md:grid-cols-4
             gap-5
-            bg-black/20
+          
           "
         >
           {galleryImages.map((image) => (
