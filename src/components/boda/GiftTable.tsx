@@ -24,9 +24,9 @@ export default function GiftTable({ stores }: Props) {
       >
         {/* Ícono */}
         <img
-          src="/boda/gift.png"
+          src="/boda/icono-regalo.png"
           alt="Mesa de regalos"
-          className="w-24 h-auto mx-auto mb-1"
+          className="w-24 h-auto mx-auto mb-1 "
         />
 
         {/* Título */}
