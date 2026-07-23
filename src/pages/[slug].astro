@@ -10,6 +10,7 @@ import WeddingMonthCalendar from "../components/boda/WeddingMonthCalendar";
 import AnimatedText from "../components/boda/AnimateText";
 import GiftTable from "../components/boda/GiftTable";
 import Gallery from "../components/boda/galeria/Gallery";
+import ReporductorMusica from "../components/boda/ComponenteMusica"
 
 // 🔥 IMPORTANTE
 export function getStaticPaths() {
@@ -47,10 +48,7 @@ Numero de pases: ${invitado.pases}
 
     <div class="relative flex flex-col w-full h-auto items-center justify-center bg-contain bg-center gap-y-6" style="background-image: url(/boda/descarga1.jpeg);" >
       <FadeInOnScroll type="fade" client:visible delay={0.5}>
-        <div class="flex flex-col w-full h-auto py-3 items-center text-navy-700 justify-start gap-y-4">
-          <p class="subtitulo text-center text-[20px]">Dale play para escuchar nuestra canción</p>
-          <p class="subtitulo text-center text-lg">icono de musica</p>
-        </div>
+        <ReporductorMusica client:visible/>
       </FadeInOnScroll>
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
         <div class="flex w-full items-center" >

@@ -35,7 +35,7 @@ export default function Seal({ nombre = 'Fam. Rivera Lopez', pases = 3, onOpen }
       <p className="subtitulo font-bold text-navy-blue mb-1 text-md uppercase">
         Hemos reservado 
       </p>
-      <div className="font-bold border border-gold-600 p-1 mb-1 text-4xl text-gold-600 rounded-lg uppercase">
+      <div className="font-bold border-2 border-gold-600 px-2 py-1 mb-1 text-4xl text-gold-600 rounded-lg uppercase">
         {pases} 
       </div>
       <p className="subtitulo font-bold text-navy-blue mb-1 text-md uppercase">        
