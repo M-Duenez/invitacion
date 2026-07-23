@@ -39,7 +39,7 @@ Numero de pases: ${invitado.pases}
 ---
 
 <Layout>
-  <OpenCard client:load nombre={invitado.nombre} pases={invitado.pases} />
+  <!-- <OpenCard client:load nombre={invitado.nombre} pases={invitado.pases} /> -->
   <main  class="">
     <CoverImage client:visible />
 
@@ -202,11 +202,16 @@ Numero de pases: ${invitado.pases}
         <div class="flex flex-col items-center justify-center gap-y-3">
 
           <AnimatedText client:visible
-              text="Dress code"
-              className="titulo text-center font-bold text-[58px] text-navy-blue "
-            />
+              text="Codigo de"
+              className="titulo text-center font-bold text-[60px] text-navy-blue "
+          />
+          <AnimatedText client:visible
+              text="vestimenta"
+              className="uppercase subtitulo text-[42px] text-navy-800 font-bold -mt-11 "
+          />
+          <p class="uppercase subtitulo text-3xl tracking-[0.5em] text-navy-800 font-bold -mt-4 mb-3">FORMAL</p>
           <img
-            src="/boda/dress_code.png"
+            src="/boda/dress_code_1.png"
             alt="Dress Code"
             class="w-[90%] md:max-w-lg h-auto rounded-xl border border-gold-500 object-contain shadow-2xl"
           />
@@ -214,8 +219,28 @@ Numero de pases: ${invitado.pases}
       </FadeInOnScroll>
       
       <FadeInOnScroll type="slide-up" client:visible>
-        <div class="flex w-full "> 
-          <GiftTable client:visible
+        <div class="flex flex-col w-full justify-center px-5 gap-y-2"> 
+          <AnimatedText client:visible
+            text="Lluvia de sobres"
+            className="titulo text-center font-bold text-[58px] text-navy-blue "
+          />
+
+          <img
+            src="/boda/mesa-regalos.png"
+            alt="sobre-abierto"
+            class={` 
+              w-full
+              h-auto
+              block
+              rounded-lg
+              border border-gold-600
+              transition duration-700 ease-out
+              pointer-events-none
+              shadow-2xl
+              `}
+            
+          />
+          <!-- <GiftTable client:visible
             stores={[
               {
                 name: "Liverpool",
@@ -228,12 +253,12 @@ Numero de pases: ${invitado.pases}
                 image: "/boda/amazon.png"
               }
             ]}
-          />
+          /> -->
         </div>
       </FadeInOnScroll>
 
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
-        <div class="flex flex-col ">
+        <div class="flex flex-col items-center justify-center px-5">
           <AnimatedText client:visible
             text="¡Prepárate!"
             className="titulo text-center font-bold text-[58px] text-navy-blue "
@@ -241,13 +266,13 @@ Numero de pases: ${invitado.pases}
           <!-- <p class="titulo text-center font-bold text-[52px] text-gold-500 tracking-[0.2em]">
             ¡Prepárate!
           </p> -->
-          <p class="subtitulo text-center text-2xl text-gold-500 mb-5 ">
+          <p class="subtitulo text-center text-2xl text-navy-600 mb-5 ">
             faltan...
           </p>
 
+          <CountDownDate client:visible date={fechaBoda} />
         </div>
 
-        <CountDownDate client:visible date={fechaBoda} />
       </FadeInOnScroll> 
 
       <FadeInOnScroll type="fade" client:visible delay={0.7}>

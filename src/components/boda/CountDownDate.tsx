@@ -38,21 +38,21 @@ export default function CountDownElegant({ date }: { date: string }) {
   }, [targetDate]);
 
   return (
-    <div className="flex item-center justify-center text-center mb-5">
+    <div className="flex item-center justify-center text-center">
       {Object.entries(timeLeft).map(([key, value], index, array) => (
         <div key={key} className="flex items-center">
 
-          <div className="flex flex-col items-center px-3">
-            <span className="text-3xl text-gold-500 font-bold">
+          <div className="flex flex-col items-center px-2">
+            <span className="text-3xl text-gold-600 font-bold">
               {value.toString().padStart(2, "0")}
             </span>
-            <span className="text-gold-400 uppercase text-xs tracking-widest">
+            <span className="text-gold-500 uppercase text-xs tracking-widest">
               {key}
             </span>
           </div>
 
           {index < array.length - 1 &&(
-            <span className="text-5xl text-gold-500 mx-1">:</span>
+            <span className="text-5xl text-gold-600 mx-1">:</span>
           )}
 
         </div>
