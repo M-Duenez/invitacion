@@ -93,6 +93,6 @@ export const galleryImages = [
     id: 16,
     src: "/boda/Y&M-64.webp",
     alt: "Viaje",
-    size: "large",
+    size: "wide",
   },
 ];
