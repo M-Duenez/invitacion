@@ -81,7 +81,7 @@ export default function MusicPlayer() {
 
             <div className=" text-center">
 
-                <p className="subtitulo text-navy-700 text-center text-[21px]">
+                <p className="subtitulo text-navy-700 text-center text-[22px]">
                     Dale play para escuchar nuestra canción
                 </p>
 
@@ -90,15 +90,7 @@ export default function MusicPlayer() {
             {/* Corazón */}
 
             <div className="flex justify-end">
-
-                <button
-                    className="
-          text-navy-700
-          transition
-          duration-300
-          "
-                >
-
+                <button className=" text-navy-700 transition duration-300">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="34"
@@ -120,8 +112,8 @@ export default function MusicPlayer() {
                 <input
                     type="range"
                     min={0}
-    max={100}
-    value={progress}
+                    max={100}
+                    value={progress}
                     readOnly
                     className="w-full accent-gold-600"
                 />
@@ -130,7 +122,7 @@ export default function MusicPlayer() {
 
             {/* Tiempo */}
 
-            <div className="flex justify-between mt-2 text-sm text-navy-700">
+            <div className="flex justify-between  text-sm text-navy-700">
 
                 <span>0:00</span>
 
@@ -233,7 +225,7 @@ export default function MusicPlayer() {
                             height="40"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            className="text-gold-700 ml-1"
+                            className="text-gold-700 "
                         >
                             <path d="M8 5v14l11-7z"/>
                         </svg>

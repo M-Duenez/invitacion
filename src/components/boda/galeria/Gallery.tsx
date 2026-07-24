@@ -14,7 +14,7 @@ export default function Gallery() {
             className="titulo text-[60px] text-navy-blue"
           />
 
-          <p className="subtitulo mt-3 text-lg text-navy-700 max-w-2xl mx-auto leading-8">
+          <p className="subtitulo mt-3 text-[19px] text-navy-700 max-w-2xl mx-auto leading-8">
             Cada fotografía representa un instante que nos acercó un poco más al
             día en que decidimos caminar juntos para siempre.
           </p>

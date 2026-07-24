@@ -18,11 +18,11 @@ export default function Seal({ nombre = 'Fam. Rivera Lopez', pases = 3, onOpen }
 
       <p className="subtitulo text-navy-700 font-bold text-[42px] mb-3">Yulissa & Miguel</p>
 
-      <div className="relative flex justify-center ">
+      <div className="relative flex justify-center px-3">
 
         <img src="/boda/sobre-2.png" className="w-full  md:max-w-[720px] h-auto" alt="" />
-        <div className="absolute inset-0 flex flex-col w-full items-center justify-end mb-8 md:mb-13 pointer-events-none">
-          <h1 className="text-[40px] md:text-6xl text-gold-400 titulo">
+        <div className="absolute  inset-0 flex flex-col w-full items-center justify-end mb-2 md:mb-13 pointer-events-none">
+          <h1 className="bg-black/30 px-4 text-center text-[41px] md:text-6xl text-gold-400 titulo rounded-xl">
             {nombre}
           </h1>
 

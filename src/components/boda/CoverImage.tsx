@@ -18,7 +18,7 @@ export default function CoverImage() {
 
       <img
       ref={imgRef}
-      src="/boda/imagen_fondo_1.webp"
+      src="/boda/imagen_fondo_3.webp"
       alt="Yulissa y Miguel"
       onLoad={() => setImageLoaded(true)}
       className={` 
