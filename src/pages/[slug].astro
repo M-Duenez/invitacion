@@ -63,12 +63,12 @@ const final = [
 
 <Layout>
   <OpenCard client:load nombre={invitado.nombre} pases={invitado.pases} />
-  <main  class="">
+  <main  class="w-full h-auto bg-contain bg-center" style="background-image: url(/boda/descarga1.jpeg);">
     <CoverImage client:visible />
 
     
 
-    <div class="relative flex flex-col w-full h-auto items-center justify-center bg-contain bg-center gap-y-6" style="background-image: url(/boda/descarga1.jpeg);" >
+    <div class="relative flex flex-col w-full h-auto lg:max-w-lg lg:mx-auto items-center justify-center gap-y-6"  >
       <FadeInOnScroll type="fade" client:visible delay={0.5}>
         <ReporductorMusica client:visible/>
       </FadeInOnScroll>

@@ -23,6 +23,8 @@ export default function CoverImage() {
       onLoad={() => setImageLoaded(true)}
       className={` 
         w-full
+        lg:max-w-lg
+        lg:mx-auto
         h-auto
         block
         transition duration-700 ease-out
