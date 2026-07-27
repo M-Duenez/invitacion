@@ -11,6 +11,8 @@ import AnimatedText from "../components/boda/AnimateText";
 import GiftTable from "../components/boda/GiftTable";
 import Gallery from "../components/boda/galeria/Gallery";
 import ReporductorMusica from "../components/boda/ComponenteMusica"
+import ImageCarousel from "../components/boda/ImageCarousel";
+
 
 // 🔥 IMPORTANTE
 export function getStaticPaths() {
@@ -37,6 +39,26 @@ Confirmo mi asistencia.
 Invitad@: ${invitado.nombre}
 Numero de pases: ${invitado.pases}
 `;
+
+const inicio = [
+  "/boda/23.webp",
+  "/boda/37.webp",
+  "/boda/47.webp",
+  "/boda/58.webp",
+]
+const medio = [
+  "/boda/Y&M-10.webp",
+  "/boda/Y&M-14.webp",
+  "/boda/Y&M-16.jpg",
+  "/boda/Y&M-29.webp",
+]
+const final = [
+  "/boda/Y&M-33.webp",
+  "/boda/Y&M-45.webp",
+  "/boda/Y&M-52.webp",
+  "/boda/Y&M-63.webp",
+  "/boda/Y&M-64.webp",
+]
 ---
 
 <Layout>
@@ -120,7 +142,9 @@ Numero de pases: ${invitado.pases}
         </div>
       </FadeInOnScroll>
 
-      <Gallery client:visible />
+      <!-- <Gallery client:visible /> -->[[
+      <ImageCarousel client:visible images={inicio}/>
+
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
         <div class="flex flex-col w-full h-auto items-center justify-center  gap-y-1" >
           <!-- <img src="/boda/Y&M-60.webp" alt="" /> -->
@@ -196,6 +220,7 @@ Numero de pases: ${invitado.pases}
         </div>
       </FadeInOnScroll>
   
+      <ImageCarousel client:visible images={medio}/>
       <FadeInOnScroll type="fade" client:visible delay={0.5}>
         <div class="flex flex-col items-center justify-center gap-y-3">
 
@@ -254,6 +279,8 @@ Numero de pases: ${invitado.pases}
           /> -->
         </div>
       </FadeInOnScroll>
+
+      <ImageCarousel client:visible images={final}/>
 
       <FadeInOnScroll type="slide-up" client:visible delay={0.5}>
         <div class="flex flex-col items-center justify-center px-5">
