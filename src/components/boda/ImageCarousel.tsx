@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function ImageCarousel({ images, autoPlay = true,
-  interval = 8000, }: Props) {
+  interval = 6000, }: Props) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
