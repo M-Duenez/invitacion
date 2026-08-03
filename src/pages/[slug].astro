@@ -138,7 +138,7 @@ const final = [
             className="titulo text-center  text-navy-blue text-[58px] font-bold"
           />
           <p class="subtitulo text-[19px] text-center text-navy-700 leading-relaxed  mb-5">Porque has sido parte de nuestra historia, queremos que estés presente en nuestro mejor capítulo</p>
-          <WeddingMonthCalendar client:visible date={fechaBoda} />
+          <WeddingMonthCalendar client:only="react" date={fechaBoda} />
         </div>
       </FadeInOnScroll>
 
