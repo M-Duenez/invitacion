@@ -1,8 +1,31 @@
 [
-  { "slug": "antonio-&-zaira", "nombre": "Fam. Luna Sifuentes", "pases": 2 },
+  { "slug": "antonio-&-zaira", "nombre": "Fam Luna Sifuentes", "pases": 2 },
   { "slug": "paulina-&-diego", "nombre": "Paulina & Diego", "pases": 2 },
   { "slug": "gloria-&-joseluis", "nombre": "Gloria & Luis", "pases": 2 },
-  { "slug": "ricardo", "nombre": "Ricardo", "pases": 2 },
+  { "slug": "ricardo", "nombre": "Ricardo", "pases": 1 },
+
+  { "slug": "fam-duenez-palomo", "nombre": "Fam Dueñez Palomo", "pases": 4 },
+  { "slug": "fam-garcia-palomo", "nombre": "Fam Garcia Palomo", "pases": 5 },
+  { "slug": "luis-palomo", "nombre": "Luis Palomo", "pases": 3 },
+  { "slug": "fam-palomo-ramirez", "nombre": "Fam Palomo Ramírez", "pases": 5 },
+  { "slug": "martha-duenez", "nombre": "Martha Dueñez", "pases": 1 },
+  { "slug": "fam-madrina-martha", "nombre": "madrina Martha", "pases": 3 },
+
+  { "slug": "fam-medina-juarez", "nombre": "Fam Medina Juarez", "pases": 2 },
+  { "slug": "fam-medina-luis", "nombre": "Fam Medina Luis", "pases": 5 },
+  { "slug": "antonio-medina", "nombre": "Antonio Medina", "pases": 2 },
+  { "slug": "fam-palomo-rojas", "nombre": "Fam Palomo Rojas", "pases": 2 },
+  
+  { "slug": "salvador-robles", "nombre": "Salvador Robles", "pases": 2 },
+  { "slug": "coro-martha", "nombre": "Martha", "pases": 2 },
+  { "slug": "coro-martha", "nombre": "Marlene", "pases": 1 },
+  { "slug": "fam-nieto-ramirez", "nombre": "Fam Nieto Ramírez", "pases": 3 },
+  
+  { "slug": "fam-armendariz", "nombre": "Fam Armendariz ", "pases": 4 },
+  { "slug": "rosi-&-daniel", "nombre": "Rosi & Daniel", "pases": 3 },
+  { "slug": "ileana", "nombre": "Ileana ", "pases": 2 },
+ 
+  
   { "slug": "fam-morales-lopez", "nombre": "Fam Morales López", "pases": 4 },
   { "slug": "fam-torres-acosta", "nombre": "Fam Torres Acosta", "pases": 4 },
   { "slug": "fam-torres-bustos", "nombre": "Fam Torres Bustos", "pases": 3 },

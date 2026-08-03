@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+interface Props {
+  title?: string;
+  message?: string;
+}
+
+const {
+  title = "Invitación no encontrada",
+  message = "El enlace al que intentas acceder no corresponde a una invitación válida. Verifica que el enlace sea correcto o ponte en contacto con los novios."
+} = Astro.props;
+---
+
+<Layout>
+    <section class="min-h-screen flex items-center justify-center bg-contain bg-center px-6" style="background-image: url(/boda/descarga1.jpeg);">
+    
+      <div
+        class="max-w-lg w-full bg-white/80 backdrop-blur-md rounded-lg border border-[#DDB86B] shadow-2xl px-3 py-8 text-center">
+    
+        <!-- Icono -->
+        <div class="mx-auto mb-3 flex items-center justify-center w-28 h-28 rounded-full border-2 border-[#DDB86B] ">
+    
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-14 h-14 fill-[#DDB86B]"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+            10-4.48 10-10S17.52 2 12 2zm0 15
+            c-.83 0-1.5-.67-1.5-1.5S11.17 14 12 14s1.5.67
+            1.5 1.5S12.83 17 12 17zm1-4h-2V7h2v6z"/>
+          </svg>
+    
+        </div>
+    
+        <h1 class="subtitulo text-4xl text-[#202643] mb-5">
+          {title}
+        </h1>
+    
+        <p class="text-[#2D3556] leading-relaxed">
+          {message}
+        </p>
+    
+      </div>
+    
+    </section>
+</Layout>
