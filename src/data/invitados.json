@@ -10,6 +10,7 @@
   { "slug": "fam-palomo-ramirez", "nombre": "Fam Palomo Ramírez", "pases": 5 },
   { "slug": "martha-duenez", "nombre": "Martha Dueñez", "pases": 1 },
   { "slug": "fam-madrina-martha", "nombre": "madrina Martha", "pases": 3 },
+  { "slug": "fam-nevarez-perez", "nombre": "Fam Nevarez Perez", "pases": 5 },
 
   { "slug": "fam-medina-juarez", "nombre": "Fam Medina Juarez", "pases": 2 },
   { "slug": "fam-medina-luis", "nombre": "Fam Medina Luis", "pases": 5 },
@@ -18,10 +19,10 @@
   
   { "slug": "salvador-robles", "nombre": "Salvador Robles", "pases": 2 },
   { "slug": "coro-martha", "nombre": "Martha", "pases": 2 },
-  { "slug": "coro-martha", "nombre": "Marlene", "pases": 1 },
+  { "slug": "coro-marlene", "nombre": "Marlene", "pases": 1 },
   { "slug": "fam-nieto-ramirez", "nombre": "Fam Nieto Ramírez", "pases": 3 },
   
-  { "slug": "fam-armendariz", "nombre": "Fam Armendariz ", "pases": 4 },
+  { "slug": "fam-armendariz", "nombre": "Fam Armendariz", "pases": 4 },
   { "slug": "rosi-&-daniel", "nombre": "Rosi & Daniel", "pases": 3 },
   { "slug": "ileana", "nombre": "Ileana ", "pases": 2 },
  
@@ -67,5 +68,6 @@
   { "slug": "jesus-valdez", "nombre": "Jesus Valdez", "pases": 1 },
   { "slug": "lupita-limon", "nombre": "Lupita Limón", "pases": 1 },
   { "slug": "mara", "nombre": "Mara", "pases": 2 },
-  { "slug": "carmen", "nombre": "Carmen", "pases": 2 }
+  { "slug": "carmen", "nombre": "Carmen", "pases": 2 },
+  { "slug": "jorge-morales", "nombre": "Jorge Morales", "pases": 2 }
 ]
