@@ -20,9 +20,10 @@
   { "slug": "salvador-robles", "nombre": "Salvador Robles", "pases": 2 },
   { "slug": "coro-martha", "nombre": "Martha", "pases": 2 },
   { "slug": "coro-marlene", "nombre": "Marlene", "pases": 1 },
-  { "slug": "fam-nieto-ramirez", "nombre": "Fam Nieto Ramírez", "pases": 3 },
+  { "slug": "fam-perez-ramirez", "nombre": "Fam Perez Ramírez", "pases": 3 },
   
-  { "slug": "fam-armendariz", "nombre": "Fam Armendariz", "pases": 5 },
+  { "slug": "fam-guerrero", "nombre": "Fam Guerrero", "pases": 3 },
+  { "slug": "fam-armendariz", "nombre": "Fam Armendariz", "pases": 2 },
   { "slug": "rosi-&-daniel", "nombre": "Rosi & Daniel", "pases": 3 },
   { "slug": "ileana", "nombre": "Ileana ", "pases": 2 },
  
