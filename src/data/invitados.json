@@ -12,7 +12,7 @@
   
   
   { "slug": "fam-palomo-ramirez", "nombre": "Fam Palomo Ramírez", "pases": 5 },  
-  { "slug": "fam-gonzalez-ramirez", "nombre": "Fam Gonzalez Palomo", "pases": 5 },
+  { "slug": "fam-gonzalez-palomo", "nombre": "Fam Gonzalez Palomo", "pases": 5 },
 
   { "slug": "fam-medina-juarez", "nombre": "Fam Medina Juarez", "pases": 2 },
   { "slug": "fam-medina", "nombre": "Fam Medina", "pases": 5 },
