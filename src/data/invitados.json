@@ -1,6 +1,6 @@
 [
   { "slug": "fam-palomo-rodriguez", "nombre": "Fam Palomo Rodriguez", "pases": 2, "mesa": 1 },
-  { "slug": "fam-asencio-palomo", "nombre": "Fam Asencio Palomo", "pases": 2, "mesa": 1 },
+  { "slug": "fam-asencio-lopez", "nombre": "Fam Asencio Lopez", "pases": 2, "mesa": 1 },
   
   { "slug": "gloria-&-joseluis", "nombre": "Gloria & Luis", "pases": 2, "mesa": 1 },
   { "slug": "ricardo", "nombre": "Ricardo", "pases": 1, "mesa": 1 },
@@ -11,9 +11,9 @@
   { "slug": "fam-garcia", "nombre": "Fam Garcia", "pases": 3, "mesa": 1 },
   { "slug": "martha-duenez", "nombre": "Martha Dueñez", "pases": 2, "mesa": 1 },
   
-  { "slug": "fam-duenez-palomo", "nombre": "Fam Dueñez Palomo", "pases": 3, "mesa": 9 },
-  { "slug": "fam-palomo-ramirez", "nombre": "Fam Palomo Ramírez", "pases": 5, "mesa": 1 },
-  { "slug": "paulina-&-diego", "nombre": "Paulina & Diego", "pases": 2, "mesa": 1 },
+  { "slug": "fam-duenez-palomo", "nombre": "Fam Dueñez Palomo", "pases": 3, "mesa": 2 },
+  { "slug": "fam-palomo-ramirez", "nombre": "Fam Palomo Ramírez", "pases": 5, "mesa": 2 },
+  { "slug": "paulina-&-diego", "nombre": "Paulina & Diego", "pases": 2, "mesa": 2 },
   
   { "slug": "fam-medina-juarez", "nombre": "Fam Medina Juarez", "pases": 2, "mesa": 1 },
   { "slug": "fam-medina", "nombre": "Fam Medina", "pases": 5, "mesa": 1 },
