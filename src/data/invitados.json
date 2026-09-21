@@ -22,6 +22,7 @@
   { "slug": "fam-medina", "nombre": "Fam Medina", "pases": 5, "mesa": 5 },
   { "slug": "fam-palomo-rojas", "nombre": "Fam Palomo Rojas", "pases": 2, "mesa": 5 },
 
+  { "slug": "antonio-medina", "nombre": "Fam Medina Rodriguez", "pases": 2, "mesa": 6 },
   { "slug": "familia-guerrero", "nombre": "Fam Guerrero", "pases": 2, "mesa": 6 },
   { "slug": "fam-armendariz", "nombre": "Fam Armendariz", "pases": 2, "mesa": 6 },
   { "slug": "rosi-&-daniel", "nombre": "Rosi & Daniel", "pases": 3, "mesa": 6 },
